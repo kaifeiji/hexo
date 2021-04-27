@@ -107,6 +107,10 @@ leancloud_counter_security:
   username: # <your username> # Will be asked while deploying if is left blank
   password: # <your password> # Recommmended to be left blank. Will be asked while deploying if is left blank
 
+cdn:
+  enable: true
+  base: //cdn.jsdelivr.net/gh/kaifeiji/kaifeiji.github.io/
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
