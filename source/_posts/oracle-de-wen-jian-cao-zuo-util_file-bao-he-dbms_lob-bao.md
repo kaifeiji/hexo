@@ -8,8 +8,6 @@ tags:
 - 文件操作
 ---
 
-![Oracle](/post-images/oracle-de-wen-jian-cao-zuo-util_file-bao-he-dbms_lob-bao.jpg)
-
 最近客户要求从老数据库迁移数据，其中涉及到把 Blob 格式的图片转为文件格式，通过研究编写了一个简单的存储过程，输入 Blob 可以向指定文件夹输出文件，供参考。
 
 <!-- more -->

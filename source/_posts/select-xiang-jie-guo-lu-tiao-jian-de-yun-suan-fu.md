@@ -9,8 +9,6 @@ tags:
 - 运算符
 ---
 
-![SELECT语句详解](/post-images/select-xiang-jie-guo-lu-tiao-jian-de-yun-suan-fu.jpg)
-
 SELECT 中的过滤条件的运算符包括关系运算符、逻辑运算符、范围运算符。
 
 关系运算符：=（等于）、>（大于）、>=（大于等于）、<（小于）、<=（小于等于）、<>（不等于）

@@ -10,7 +10,7 @@ tags:
 - 小窍门
 ---
 
-![Excel导入Oracle](/post-images/excel-shu-ju-dao-ru-oracle-de-qi-ji-yin-qiao.jpg)
+Excel数据导入Oracle小窍门
 
 <!-- more -->
 

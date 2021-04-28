@@ -10,8 +10,6 @@ tags:
 - 差异
 ---
 
-![PostgreSQL](/post-images/postgresql-yu-oracle-de-yu-fa-chai-yi-zong-jie.png)
-
 为了降低成本、顺应开源化潮流，公司从 Oracle 转向了 PostgreSQL。由于是连平台一块换了，不存在迁移的问题，所以不需要使用 orafce、Ora2pg 之类的转换迁移工具，只需要了解语法差异，转换比较平稳。
 
 PG 目前是数据库榜单上的探花，坐观榜眼 MySQL 和状元 Oracle，学习一下还是很有价值的！

@@ -8,7 +8,7 @@ tags:
 - 小耗子
 ---
 
-![夏天](/post-images/xia-tian.webp)
+夏天
 
 <!-- more -->
 

@@ -10,11 +10,11 @@ tags:
 - HTML5
 ---
 
-![万有引力](/post-images/gravity-er-wei-wan-you-yin-li-you-xi-hei-mei.png)
-
 “万有引力”（Gravity），自己开发的第一个原生黑莓游戏，BlackBerry World 已上架。根据万有引力定律模拟 2D 天体运动，可以组成双星、三体、类太阳系等系统，更多玩法自行探索~
 
 <!-- more -->
+
+![万有引力](/post-images/gravity-er-wei-wan-you-yin-li-you-xi-hei-mei.png)
 
 基于黑莓 WebWorks 的 HTML5 开发，创意来源于：[Nowykurier](http://www.nowykurier.com/toys/gravity/gravity.html)
 

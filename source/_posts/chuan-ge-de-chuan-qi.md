@@ -9,8 +9,6 @@ tags:
 - 传哥
 ---
 
-![呀哈买塔利根](/post-images/chuan-ge-de-chuan-qi.jpg)
-
 发信人: lpingvm (我是打工的), 信区: War3
 
 标 题: 传哥-的传奇
@@ -18,6 +16,8 @@ tags:
 发信站: 北地风情 BBS 站 (Sun Aug 16 18:33:48 2009), 转信
 
 <!-- more -->
+
+![呀哈买塔利根](/post-images/chuan-ge-de-chuan-qi.jpg)
 
 事情过去了有几个月了.
 我依然不能忘记那一次给我的震撼.

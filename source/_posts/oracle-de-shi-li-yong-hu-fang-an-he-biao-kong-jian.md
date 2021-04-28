@@ -11,8 +11,6 @@ tags:
 - 表空间
 ---
 
-![Oracle](/post-images/oracle-de-shi-li-yong-hu-fang-an-he-biao-kong-jian.jpg)
-
 刚开始接触数据库时，对数据库的实例、用户、方案和表空间的概念和关系比较迷惑。
 
 经过一段时间使用 Oracle，有了初步的认识，在这里记录一下。

@@ -9,9 +9,11 @@ tags:
 - 日出
 ---
 
-![澳大利亚的海上日出](/post-images/lu-xing-de-yi-yi.jpg)
+旅行的意义
 
 <!-- more -->
+
+![澳大利亚的海上日出](/post-images/lu-xing-de-yi-yi.jpg)
 
 想起结婚旅行，去澳大利亚的两周时光。
 

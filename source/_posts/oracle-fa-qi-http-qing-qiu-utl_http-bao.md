@@ -8,8 +8,6 @@ tags:
 - HTTP请求
 ---
 
-![Oracle](/post-images/oracle-de-wen-jian-cao-zuo-util_file-bao-he-dbms_lob-bao.jpg)
-
 无论在前端还是在后端，发送 HTTP 请求都是一件稀松平常的事。
 
 前端可以用 jQuery 的 Ajax 方法 post、get 等，后端语言也都有 HTTP 请求相关的库可以直接调用。

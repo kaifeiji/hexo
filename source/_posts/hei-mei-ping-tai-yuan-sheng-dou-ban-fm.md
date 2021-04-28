@@ -9,11 +9,11 @@ tags:
 - 原生
 ---
 
-![豆瓣FM](/post-images/hei-mei-ping-tai-yuan-sheng-dou-ban-fm.png)
-
 黑莓的生态真的是差，差到连豆瓣 FM 都没有，只好自己动手来一个。更新至 1.0.0，全新界面更美观，加入歌词，加入离线收听，加入定时关闭。
 
 <!-- more -->
+
+![豆瓣FM](/post-images/hei-mei-ping-tai-yuan-sheng-dou-ban-fm.png)
 
 基于黑莓 WebWorks 的 HTML5，调用[豆瓣 FM API](https://github.com/zonyitoo/doubanfm-qt/wiki/%E8%B1%86%E7%93%A3FM-API)
 

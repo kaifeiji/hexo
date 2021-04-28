@@ -8,7 +8,7 @@ tags:
 - Edge
 ---
 
-![Edge](/post-images/microsoft-edge-logo-icon-2020.webp)
+尝试用了新版Edge，最后还是回归Chrome。
 
 <!-- more -->
 

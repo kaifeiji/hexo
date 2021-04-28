@@ -10,12 +10,13 @@ tags:
 - 伊犁河
 ---
 
-![初识天山](/post-images/chu-shi-tian-shan.jpg)
-
 跟导师和师兄到新疆伊犁野外实习。
-封面是宿舍拍到的夕阳。
 
 <!-- more -->
+
+宿舍拍到的夕阳
+
+![初识天山](/post-images/chu-shi-tian-shan.jpg)
 
 路边的野花
 

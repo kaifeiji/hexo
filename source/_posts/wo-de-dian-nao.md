@@ -7,9 +7,11 @@ tags:
 - 电脑
 ---
 
-![我的电脑](/post-images/wo-de-dian-nao.jpg)
+我的电脑
 
 <!-- more -->
+
+![我的电脑](/post-images/wo-de-dian-nao.jpg)
 
 研一的时候想要新电脑更新换代（以前有一个 HP 笔记本），家里不太乐意出钱。
 

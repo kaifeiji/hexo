@@ -8,8 +8,6 @@ tags:
 - 存储过程
 ---
 
-![Oracle](/post-images/oracle-de-cun-chu-guo-cheng-ni-ming-kuai-han-shu-guo-cheng-bao.jpg)
-
 对于 Oracle 数据库开发的入门玩家，很可能对“存储过程”的概念感到困惑。
 
 PL/SQL 作为一种数据库编程语言，以数据表作为工作对象，其主要实现途径就是存储过程。

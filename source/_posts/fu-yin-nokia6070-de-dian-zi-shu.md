@@ -10,11 +10,11 @@ tags:
 - MotoTXT
 ---
 
-![Nokia 6070](/post-images/fu-yin-nokia6070-de-dian-zi-shu.png)
-
 逆境使人成长！
 
 <!-- more -->
+
+![Nokia 6070](/post-images/fu-yin-nokia6070-de-dian-zi-shu.png)
 
 昨天我的 Onda（昂达） VX989 在陪伴了我差 3 天 15 个月的时光之后，终于寿终正寝！
 

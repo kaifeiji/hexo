@@ -8,8 +8,6 @@ tags:
 - XCOPY
 ---
 
-![XCOPY](/post-images/qiao-yong-xcopybei-fen-he-fu-zhi-wen-jian.png)
-
 Windows 的复制、粘贴功能非常方便，但在某些场景下并不好用：
 
 1. 复制粘贴单个超大文件或海量小文件时

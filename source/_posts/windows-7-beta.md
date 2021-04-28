@@ -8,11 +8,11 @@ tags:
 - 测评
 ---
 
-![Windows7](/post-images/windows-7-beta.png)
-
 Windows7 发布在即，抢先尝试啦！
 
 <!-- more -->
+
+![Windows7](/post-images/windows-7-beta.png)
 
 win7 自带小工具，日历，时钟，天气预报，股票，媒体中心，rss……还可以自己下载其他功能的
 

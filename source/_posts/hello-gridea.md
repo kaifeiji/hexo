@@ -8,8 +8,6 @@ tags:
 - 博客
 ---
 
-![Gridea](/post-images/hello-gridea.png)
-
 人生，就是不停的折腾。
 
 <!-- more -->

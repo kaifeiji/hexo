@@ -8,7 +8,7 @@ tags:
 - 内置函数
 ---
 
-![Oracle](/post-images/oracle-de-chang-yong-nei-zhi-han-shu.jpg)
+Oracle常用内置函数总结
 
 <!-- more -->
 

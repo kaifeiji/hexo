@@ -11,8 +11,6 @@ tags:
 - frp
 ---
 
-![树莓派](/post-images/shu-mei-pai-4b-zhen-shi-shi-yong-ti-yan.jpg)
-
 之前用 2012 年的老旧笔记本 ThinkPad E530c，做了一个 Aria2 下载服务器。
 
 时间长了发现这玩意耗电还是挺可观的，遂买了树莓派 4B，作为替代。
@@ -20,6 +18,8 @@ tags:
 美其名曰节能减排，实际就是按捺不住骚动的内心，实在是想着折腾点啥吧。
 
 <!-- more -->
+
+![树莓派](/post-images/shu-mei-pai-4b-zhen-shi-shi-yong-ti-yan.jpg)
 
 # 购置
 

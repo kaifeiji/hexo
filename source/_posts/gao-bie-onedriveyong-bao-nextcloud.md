@@ -10,9 +10,11 @@ tags:
 - Ubuntu
 ---
 
-![Nextcloud](/post-images/Nextcloud.png)
+告别OneDrive，拥抱Nextcloud
 
 <!-- more -->
+
+![Nextcloud](/post-images/Nextcloud.png)
 
 **2021-04-26更新**
 

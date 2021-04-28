@@ -8,11 +8,11 @@ tags:
 - 贪吃蛇
 ---
 
-![贪吃蛇](/post-images/tong-nian-hui-yi-hei-bai-ping-you-xi-ji-tan-chi-she-hei-mei.png)
-
 黑莓原生复刻诺基亚 6100 经典游戏——贪吃蛇，原汁原味，不容错过哦~
 
 <!-- more -->
+
+![贪吃蛇](/post-images/tong-nian-hui-yi-hei-bai-ping-you-xi-ji-tan-chi-she-hei-mei.png)
 
 # Old School!
 

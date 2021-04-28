@@ -9,7 +9,7 @@ tags:
 - 小耗子
 ---
 
-![章鱼](/post-images/tom-and-jerry.webp)
+给儿子起名的经过。
 
 <!-- more -->
 

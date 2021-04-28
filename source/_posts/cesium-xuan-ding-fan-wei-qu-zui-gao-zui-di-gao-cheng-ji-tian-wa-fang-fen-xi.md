@@ -10,11 +10,11 @@ tags:
 - 算法
 ---
 
-![Cesium填挖方分析](/post-images/cesium-xuan-ding-fan-wei-qu-zui-gao-zui-di-gao-cheng-ji-tian-wa-fang-fen-xi.png)
-
 最近做一个填挖方分析的三维功能模块，受前人启发实现了一种取最高最低高程，以及填挖方分析的方法。
 
 <!-- more -->
+
+![Cesium填挖方分析](/post-images/cesium-xuan-ding-fan-wei-qu-zui-gao-zui-di-gao-cheng-ji-tian-wa-fang-fen-xi.png)
 
 # 前人的启示
 

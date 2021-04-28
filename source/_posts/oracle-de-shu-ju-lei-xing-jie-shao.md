@@ -8,8 +8,6 @@ tags:
 - 数据类型
 ---
 
-![Oracle](/post-images/oracle-de-shu-ju-lei-xing-jie-shao.jpg)
-
 本文简要介绍 Oracle 常用的基本数据类型及特点，包括**字符类型**、**LOB 类型**、**数值类型**、**日期类型**。
 
 <!-- more -->

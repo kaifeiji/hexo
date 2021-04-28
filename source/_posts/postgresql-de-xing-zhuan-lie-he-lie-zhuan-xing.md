@@ -9,8 +9,6 @@ tags:
 - 列转行
 ---
 
-![PostgreSQL](/post-images/postgresql-de-xing-zhuan-lie-he-lie-zhuan-xing.png)
-
 Oracle 中的行转列和列转行分别有 pivot 和 unpivot 方法。
 
 在 PostgreSQL 中，行列互转的方法也有很多，在这里介绍常用的两种。

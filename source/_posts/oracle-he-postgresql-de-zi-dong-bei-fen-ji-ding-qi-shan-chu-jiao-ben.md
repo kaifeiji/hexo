@@ -10,8 +10,6 @@ tags:
 - 定时清理
 ---
 
-![Oracle](/post-images/oracle-he-postgresql-de-zi-dong-bei-fen-ji-ding-qi-shan-chu-jiao-ben.jpg)
-
 数据库备份是系统安全的重要保障。
 
 但持续的备份会使磁盘空间越来越小，若运维不及时，可能导致磁盘写满、服务器宕机的事故。

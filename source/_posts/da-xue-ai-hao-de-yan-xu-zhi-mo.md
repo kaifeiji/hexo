@@ -10,11 +10,11 @@ tags:
 - 纸模
 ---
 
-![涧桥山](/post-images/da-xue-ai-hao-de-yan-xu-zhi-mo.jpg)
-
 大学的时候做了一个跑跑卡丁车的红色爆裂 SRA 的纸模，最近无聊，又开始延续大学的爱好。
 
 <!-- more -->
+
+![涧桥山](/post-images/da-xue-ai-hao-de-yan-xu-zhi-mo.jpg)
 
 # 小熊维尼
 

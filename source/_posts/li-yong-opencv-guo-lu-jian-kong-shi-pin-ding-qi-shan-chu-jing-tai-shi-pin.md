@@ -9,12 +9,12 @@ tags:
 - Python
 ---
 
-![OpenCV](/post-images/li-yong-opencv-guo-lu-jian-kong-shi-pin-ding-qi-shan-chu-jing-tai-shi-pin.png)
-
 孩子出生以后，在客厅安了一个小米摄像头，没有用小米的付费存储，视频存储到 NAS 存储。
 时间长了，发现很多静态画面的视频，占用了太多空间，写了一个脚本检测视频，定期删除无意义的视频，并且把视频的动态截取成缩略图，另存一文件夹，方便后续调取时查看。
 
 <!-- more -->
+
+![OpenCV](/post-images/li-yong-opencv-guo-lu-jian-kong-shi-pin-ding-qi-shan-chu-jing-tai-shi-pin.png)
 
 # 安装 OpenCV
 

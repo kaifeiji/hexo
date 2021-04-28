@@ -13,11 +13,11 @@ tags:
 - 蓝鲸
 ---
 
-![月亮](/post-images/zai-jia-xing-yuan-zuo-de-xiao-shou-gong.jpg)
-
 搬到佳兴园以后，断断续续的做了一些手工，一直也没整理，在这里整理一下，哪怕手工丢了坏了，还能留一点照片。
 
 <!-- more -->
+
+![月亮](/post-images/zai-jia-xing-yuan-zuo-de-xiao-shou-gong.jpg)
 
 # 小猪佩奇、海绵宝宝、派大星
 

@@ -9,11 +9,11 @@ tags:
 - 纸模
 ---
 
-![爆裂SR](/post-images/hong-se-bao-lie-sra-quan-shou-gong-zhi-zuo-popkart.png)
-
 跟大胖（任华宁）一起用 A4 纸彩打做的纸模！
 
 <!-- more -->
+
+![爆裂SR](/post-images/hong-se-bao-lie-sra-quan-shou-gong-zhi-zuo-popkart.png)
 
 手机照的效果不太好。
 

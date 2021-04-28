@@ -12,9 +12,11 @@ tags:
 - 超级马里奥
 ---
 
-![恐龙快打](/post-images/mame-zhao-hui-tong-nian-ji-lu.png)
+在Ubuntu 20.04 LTS上安装Mame，玩老学校的街机游戏。
 
 <!-- more -->
+
+![恐龙快打](/post-images/mame-zhao-hui-tong-nian-ji-lu.png)
 
 # 环境
 

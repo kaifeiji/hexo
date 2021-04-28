@@ -11,11 +11,11 @@ tags:
 - timeback
 ---
 
-![玩转exif](/post-images/dao-ru-iphone-de-zhao-pian-ru-he-bao-liu-shi-ke-xin-xi-an-shi-jian-pai-xu.jpg)
-
 iTunes 导入 iPhone 的照片，取的是 EXIF 日期、创建日期、修改日期、访问日期中最晚的那个日期。本文采用的是 ACDSee 和 Timeback，将要导入 iPhone 的照片四个日期改为一致的，就能保证导入的照片时间顺序啦。
 
 <!-- more -->
+
+![玩转exif](/post-images/dao-ru-iphone-de-zhao-pian-ru-he-bao-liu-shi-ke-xin-xi-an-shi-jian-pai-xu.jpg)
 
 # 整理照片
 

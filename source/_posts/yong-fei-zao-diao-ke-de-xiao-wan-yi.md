@@ -11,12 +11,11 @@ tags:
 - 红色警戒
 ---
 
-![月亮](/post-images/yong-fei-zao-diao-ke-de-xiao-wan-yi.jpg)
-
 最近单位发了一箱肥皂，想起小时候的一件事，我三爷家的一个姐姐，交了一个美术作业，是用肥皂雕刻的小狐狸。想想自己也用不掉，干脆玩一玩，做了一些小玩意。
 
 <!-- more -->
 
+![月亮](/post-images/yong-fei-zao-diao-ke-de-xiao-wan-yi.jpg)
 # DOTA
 
 ![DOTA](/post-images/1560678234966.jpg)

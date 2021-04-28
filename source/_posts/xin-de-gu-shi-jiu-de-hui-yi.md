@@ -9,9 +9,11 @@ tags:
 - 指引
 ---
 
-![仙剑奇侠传](/post-images/xin-de-gu-shi-jiu-de-hui-yi.jpg)
+新的故事 旧的回忆
 
 <!-- more -->
+
+![仙剑奇侠传](/post-images/xin-de-gu-shi-jiu-de-hui-yi.jpg)
 
 # E530C
 

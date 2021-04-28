@@ -13,8 +13,6 @@ tags:
 - 分组过滤
 ---
 
-![SELECT语句详解](/post-images/select-xiang-jie-guo-lu-ju-he-fen-zu-pai-xu-wei-yi-zhi-fen-zu-guo-lu.jpg)
-
 DBA 在日常工作中，最常用的就是查询数据语句——SELECT 语句。
 
 本文简单介绍 SELECT 语句的基本语法，包括过滤、聚合、分组、排序、唯一值、分组过滤等。
