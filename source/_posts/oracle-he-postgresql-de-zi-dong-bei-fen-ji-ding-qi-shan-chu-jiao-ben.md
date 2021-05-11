@@ -2,7 +2,7 @@
 title: 'Oracle和PostgreSQL的自动备份及定期删除脚本'
 date: 2019-07-02 08:27:28
 categories:
-- 运维实施
+- 运维
 tags:
 - Oracle
 - PostgreSQL

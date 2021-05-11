@@ -2,7 +2,7 @@
 title: '巧用XCOPY，备份和复制文件'
 date: 2018-02-11 22:57:27
 categories:
-- 运维实施
+- 运维
 tags:
 - 复制文件
 - XCOPY
