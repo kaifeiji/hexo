@@ -11,7 +11,7 @@ tags:
 
 > 原文：[Interfaces in JavaScript with ES6 Symbol. Naive implementation](https://codeburst.io/interfaces-in-JavaScript-with-es6-naive-implementation-91b703110a09)
 
-众所周知，JavaScript用独特的方式实现了OOP（面向对象），与C#和Java的实现方式非常不同。在ES6之前，JavaScript是不支持类（`class`）的，因此OOP是通过原型（`prototype`）和其他一些自定义的方式实现的。现在`class`类已经是JavaScript语言的一部分，而且逐渐被广泛使用，人们开始想要更进一步，在JavaScript中使用接口（`interface`）。为了满足这个需求，有人提出了[first class protocols](https://github.com/michaelficarra/proposal-first-class-protocols)。但这一提案仍初于Stage 1，所以距离成为语言标准还有很长的时间。我们在JavaScript的现状下，如何实现这一目的呢：
+众所周知，JavaScript用独特的方式实现了OOP（面向对象），与C#和Java的实现方式非常不同。在ES6之前，JavaScript是不支持类（`class`）的，因此OOP是通过原型（`prototype`）和其他一些自定义的方式实现的。现在`class`类已经是JavaScript语言的一部分，而且逐渐被广泛使用，人们开始想要更进一步，在JavaScript中使用接口（`interface`）。为了满足这个需求，有人提出了[first class protocols](https://github.com/michaelficarra/proposal-first-class-protocols)。但这一提案仍处于Stage 1，所以距离成为语言标准还有很长的时间。我们在JavaScript的现状下，如何实现这一目的呢：
 
 1. *不要简单的使用**鸭子类型**去实现*。有时候，这种方式也满足使用，但在许多情况下会导致应用发生不可预测的问题。
 
