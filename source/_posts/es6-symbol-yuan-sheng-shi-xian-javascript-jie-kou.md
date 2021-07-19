@@ -1,8 +1,13 @@
 ---
-title: 使用ES6的Symbol原生实现JavaScript接口
+title: 译：使用ES6的Symbol原生实现JavaScript接口
 date: 2021-05-11 16:52:55
 categories:
+- 前端
 tags:
+- Javascript
+- Symbol
+- 接口
+- 翻译
 ---
 
 翻译了2017年的一篇文章，介绍如何用Symbol实现JavaScript接口。
