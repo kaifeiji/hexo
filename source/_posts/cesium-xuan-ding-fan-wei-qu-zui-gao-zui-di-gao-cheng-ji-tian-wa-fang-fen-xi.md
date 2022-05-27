@@ -103,7 +103,3 @@ cesiumSamplePoints.forEach((point) => {
 示例：
 
 [cut&fill](http://kaifeiji.cc/demos/cutandfill.html)
-
-完整代码：
-
-[https://github.com/kaifeiji/cesium-examples/blob/master/cutandfill.html](https://github.com/kaifeiji/cesium-examples/blob/master/cutandfill.html)
