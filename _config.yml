@@ -5,7 +5,7 @@
 # Site
 title: 开飞机的老张
 subtitle: '写给未来的信'
-description: '半路出家的程序员<br />前端、数据库、实施运维<br /><br />喜欢折腾各种好玩的<br /><br />'
+description: '半路出家的程序员<br />前端、数据库、实施运维<br /><br />'
 keywords:
 author: kaifeiji
 language: zh-CN
@@ -108,8 +108,8 @@ leancloud_counter_security:
   password: # <your password> # Recommmended to be left blank. Will be asked while deploying if is left blank
 
 cdn:
-  enable: true
-  base: //cdn.jsdelivr.net/gh/kaifeiji/kaifeiji.github.io/
+  enable: false
+  # base: //cdn.jsdelivr.net/gh/kaifeiji/kaifeiji.github.io/
 
 feed:
   enable: true
@@ -129,6 +129,6 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/kaifeiji/kaifeiji.github.io
+  repo: git@github.com:kaifeiji/kaifeiji.github.io.git
   branch: master
   token: ''
