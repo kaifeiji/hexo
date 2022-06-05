@@ -188,6 +188,10 @@ npm源在设为Verdaccio后，每次`npm install`都需要打开Verdaccio。
 
 可以根据storage目录下各个包文件夹的修改时间，筛选出本次更新的包，增量拷入内网。
 
+> 2022-02-09更新
+> 参考以下文章，可以更方便的实现增量更新
+> [如何复制一部分文件，同时创建原来路径的文件夹结构？](/post/partial-copy-with-directory-structure/)
+
 ## 失败的尝试
 
 总结如下：
