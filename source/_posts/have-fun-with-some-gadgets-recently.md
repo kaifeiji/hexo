@@ -23,9 +23,9 @@ tags:
 
 用微积木拼了一个显示器外壳（超级玛丽），买了块驱动板，用旧笔记本的屏幕做了一块还不错的副屏。
 
-![](/post-images/have-fun-with-some-gadgets-recently-2022-09-16-14-44-16.png)
+![](/post-images/have-fun-with-some-gadgets-recently-2022-09-16-14-44-16.jpg)
 
-![](/post-images/have-fun-with-some-gadgets-recently-2022-09-16-14-45-28.png)
+![](/post-images/have-fun-with-some-gadgets-recently-2022-09-16-14-45-28.jpg)
 
 ### 驱动板
 
@@ -58,6 +58,10 @@ tags:
 NUC6CAYH准系统，没有内存和硬盘，正好可以把旧笔记本的内存和硬盘用上。
 
 个头小，接口齐全，CPU是J3455，看中的就是它的低功耗。
+
+![](/post-images/have-fun-with-some-gadgets-recently-2022-09-16-14-46-22.jpg)
+
+![](/post-images/have-fun-with-some-gadgets-recently-2022-09-16-14-47-35.jpg)
 
 到货后翻车了，旧笔记本的内存是DDR3，而这个NUC需要DDR3L（低压版）。
 
