@@ -103,7 +103,7 @@ leancloud_counter_security:
   enable_sync: true
   app_id: cnHIUDuungOEXCPMd9tftQEA # <your app id>
   app_key: otCrgvn3d5la1Og0MRYOFefs # <your app key>
-  server_url: #<your server url> # Required for apps from CN region, e.g. https://leancloud.cn
+  server_url: https://leancloud.cn # Required for apps from CN region, e.g. https://leancloud.cn
   username: # <your username> # Will be asked while deploying if is left blank
   password: # <your password> # Recommmended to be left blank. Will be asked while deploying if is left blank
 
