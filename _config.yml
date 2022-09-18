@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://kaifeiji.cc
+url: https://kaifeiji.cc
 permalink: post/:title/
 permalink_defaults:
 pretty_urls:
@@ -124,6 +124,22 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  template: ./sitemap_template.xml
+  template_txt: ./sitemap_template.txt
+  rel: false
+  tags: true
+  categories: true
+
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
