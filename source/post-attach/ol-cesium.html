@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Include the CesiumJS JavaScript and CSS files -->
+		<script src="https://cesium.com/downloads/cesiumjs/releases/1.89/Build/Cesium/Cesium.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+		<link href="https://cesium.com/downloads/cesiumjs/releases/1.89/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css" />
+	</head>
+	<body style="padding: 0; margin: 0">
+		<div style="display: flex">
+			<div id="cesiumContainer" style="width: 50%; height: 100vh"></div>
+			<div id="olContainer" style="width: 50%; height: 100vh"></div>
+		</div>
+
+		<script>
+			// Your access token can be found at: https://cesium.com/ion/tokens.
+			Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiYTVjZjA3OS00N2NiLTRkNDYtOWU3My1iNjU4ZDBiMjNmNDIiLCJpZCI6MjYwMjUsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1ODcwMzE3OTl9.Pk4YEkuYDmpU0dEXF6XP3h4EkhTpSv6gBjKDyCm4ImE';
+			// Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
+			const viewer = new Cesium.Viewer('cesiumContainer', {
+				terrainProvider: Cesium.createWorldTerrain(),
+			});
+			// Add Cesium OSM Buildings, a global 3D buildings layer.
+			const buildingTileset = viewer.scene.primitives.add(Cesium.createOsmBuildings());
+
+			const olMap = new ol.Map({
+				target: 'olContainer',
+				view: new ol.View({
+					projection: new ol.proj.Projection({
+						code: 'EPSG:3857',
+						units: 'm',
+					}),
+					center: [0, 0],
+					extent: [-20037508.3427892, -20037508.3427892, 20037508.3427892, 20037508.3427892],
+					zoom: 2,
+				}),
+			});
+
+			olMap.addLayer(
+				new ol.layer.Tile({
+					visible: true,
+					preload: Infinity,
+					source: new ol.source.BingMaps({
+						key: 'Aq6cnEx1WH4FDmEW0of-dclQvXRBx3YqpvkWX6_L-NWO2HMbtq6WzhENNYr4G7cZ',
+						imagerySet: 'Aerial',
+						// use maxZoom 19 to see stretched tiles instead of the BingMaps
+						// "no photos at this zoom level" tiles
+						// maxZoom: 19
+					}),
+				})
+			);
+
+			viewer.camera.changed.addEventListener(updateView);
+			viewer.camera.percentageChanged = 0.01;
+
+			viewer.camera.flyTo({
+				destination: Cesium.Cartesian3.fromDegrees(115.82, 40.475, 60000),
+				orientation: {
+					heading: Cesium.Math.toRadians(0.0),
+					pitch: Cesium.Math.toRadians(-90.0),
+				},
+			});
+
+			function updateView() {
+				const ellipsoid = Cesium.Ellipsoid.WGS84;
+				const scene = viewer.scene;
+				const target = pickCenterPoint(scene);
+
+				let bestTarget = target;
+				if (!bestTarget) {
+					const globe = scene.globe;
+					const carto = viewer.camera.positionCartographic.clone();
+					const height = globe.getHeight(carto);
+					carto.height = height || 0;
+					bestTarget = Cesium.Elliposoid.WGS84.cartographicToCartesian(carto);
+				}
+				const distance = Cesium.Cartesian3.distance(bestTarget, viewer.camera.position);
+				const bestTargetCartographic = ellipsoid.cartesianToCartographic(bestTarget);
+				const view = olMap.getView();
+				const center = ol.proj.transform([(bestTargetCartographic.longitude * 180) / Math.PI, (bestTargetCartographic.latitude * 180) / Math.PI], 'EPSG:4326', 'EPSG:3857');
+				view.setCenter(center);
+				const resolution = calcResolutionForDistance(distance, bestTargetCartographic ? bestTargetCartographic.latitude : 0, scene, view.getProjection());
+				view.setResolution(resolution);
+				if (target) {
+					const pos = viewer.camera.position;
+					const targetNormal = new Cesium.Cartesian3();
+					ellipsoid.geocentricSurfaceNormal(target, targetNormal);
+					const targetToCamera = new Cesium.Cartesian3();
+					Cesium.Cartesian3.subtract(pos, target, targetToCamera);
+					Cesium.Cartesian3.normalize(targetToCamera, targetToCamera);
+					const up = viewer.camera.up;
+					const right = viewer.camera.right;
+					const normal = new Cesium.Cartesian3(-target.y, target.x, 0);
+					const heading = Cesium.Cartesian3.angleBetween(right, normal);
+					const cross = Cesium.Cartesian3.cross(target, up, new Cesium.Cartesian3());
+					const orientation = cross.z;
+					view.setRotation(orientation < 0 ? heading : -heading);
+				} else {
+					view.setRotation(viewer.camera.heading);
+				}
+			}
+			function pickCenterPoint(scene) {
+				const canvas = scene.canvas;
+				const center = new Cesium.Cartesian2(canvas.clientWidth / 2, canvas.clientHeight / 2);
+				return pickOnTerrainOrEllipsoid(scene, center);
+			}
+			function pickOnTerrainOrEllipsoid(scene, pixel) {
+				const ray = scene.camera.getPickRay(pixel);
+				const target = scene.globe.pick(ray, scene);
+				return target || scene.camera.pickEllipsoid(pixel);
+			}
+			function calcResolutionForDistance(distance, latitude, scene, projection) {
+				const canvas = scene.canvas;
+				const camera = scene.camera;
+				const fovy = camera.frustum.fovy;
+				const metersPerUnit = projection.getMetersPerUnit();
+				const visibleMeters = 2 * distance * Math.tan(fovy / 2);
+				const relativeCircumference = Math.cos(Math.abs(latitude));
+				const visibleMapUnits = visibleMeters / metersPerUnit / relativeCircumference;
+				const resolution = visibleMapUnits / canvas.clientHeight;
+				return resolution;
+			}
+		</script>
+	</body>
+</html>

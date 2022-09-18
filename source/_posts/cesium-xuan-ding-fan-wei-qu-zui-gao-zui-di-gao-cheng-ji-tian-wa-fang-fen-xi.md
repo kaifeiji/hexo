@@ -102,4 +102,4 @@ cesiumSamplePoints.forEach((point) => {
 
 示例：
 
-[cut&fill](http://kaifeiji.cc/demos/cutandfill.html)
+[cut&fill](/post-attach/cutandfill.html)

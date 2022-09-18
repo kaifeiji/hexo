@@ -2,7 +2,10 @@
 title: 在Windows中使用rsync
 date: 2022-09-18 21:56:39
 categories:
+- 运维
 tags:
+- rsync
+- Windows
 ---
 
 本博客部署在VPS上，之前一直用SFTP上传到服务器，不是很方便。

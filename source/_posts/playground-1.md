@@ -2,7 +2,7 @@
 title: 纯前端解析、浏览和编辑Shapefile——mapshaper
 date: 2021-12-14 14:03:37
 categories:
-- 前端
+- 工具
 tags:
 - GIS
 - Shapefile

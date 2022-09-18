@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Include the CesiumJS JavaScript and CSS files -->
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.76/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.76/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
+</head>
+<body style="padding:0;margin:0;">
+  <div style="display: flex">
+    <div id="cesiumContainer" style="width: 100%; height: 100vh"></div>
+  </div>
+  <script>
+    // Your access token can be found at: https://cesium.com/ion/tokens.
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiYTVjZjA3OS00N2NiLTRkNDYtOWU3My1iNjU4ZDBiMjNmNDIiLCJpZCI6MjYwMjUsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1ODcwMzE3OTl9.Pk4YEkuYDmpU0dEXF6XP3h4EkhTpSv6gBjKDyCm4ImE';
+    // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
+    const viewer = new Cesium.Viewer('cesiumContainer', {
+      terrainProvider: Cesium.createWorldTerrain()
+    });
+    // Add Cesium OSM Buildings, a global 3D buildings layer.
+    const buildingTileset = viewer.scene.primitives.add(Cesium.createOsmBuildings());   
+    // Fly the camera to San Francisco at the given longitude, latitude, and height.
+    viewer.camera.flyTo({
+      destination : Cesium.Cartesian3.fromDegrees(115.82,40.475,1500),
+      orientation : {
+        heading : Cesium.Math.toRadians(0.0),
+        pitch : Cesium.Math.toRadians(-45.0),
+      }
+    });
+    // 开启地形深度检测
+    viewer.scene.globe.depthTestAgainstTerrain = true;
+    //Cartersian3格式的范围point
+    const cesiumExtentPoints = Cesium.Cartesian3.fromDegreesArray([
+      115.81892851491955, 40.4802518813306,
+      115.81630221287354, 40.482671616134674,
+      115.81951377727235,40.4833706498091,
+      115.81892851491955, 40.4802518813306,
+    ]);
+    // turf格式的polygon
+    const turfPolygon = turf.polygon([[
+      [115.81892851491955, 40.4802518813306],
+      [115.81630221287354, 40.482671616134674],
+      [115.81951377727235,40.4833706498091],
+      [115.81892851491955, 40.4802518813306],
+    ]]);
+    // 获取四至
+    const turfExtent = turf.bbox(turfPolygon);
+    // 在turfPolygon中按网格取样点，网格间距3米
+    const turfSamplePoints=turf.pointGrid(turfExtent,0.003,{
+      units:'kilometers',
+      mask: turfPolygon,
+    });
+    // 将turf取样点转为Cesium的取样点
+    const cesiumSamplePoints = [];
+    for (let i = 0; i < turfSamplePoints.features.length; i++) {
+      const coord = turfSamplePoints.features[i].geometry.coordinates;
+      cesiumSamplePoints.push(Cesium.Cartographic.fromDegrees(coord[0],coord[1]));
+    }
+    // 获取取样点的高程，使用11级地形，级别越高越精确，但更耗时
+    Cesium.when(Cesium.sampleTerrain(viewer.terrainProvider,11,cesiumSamplePoints),(updatedPoints) => {
+      // 在更新后的取样点中，获得最高海拔和最低海拔
+      let highest = 0;
+      let lowest = 8888;
+      updatedPoints.forEach(point=>{
+        if (point.height>highest) {
+          highest = point.height.toFixed(3);
+        }
+        if (point.height<lowest) {
+          lowest = point.height.toFixed(3);
+        }
+      });
+      // 设定平整高程
+      const level = 620;
+      // 根据范围点圈定墙体
+      const wall = viewer.entities.add({
+        name:'',
+        wall:{
+          positions: cesiumExtentPoints,
+          maximumHeights: new Array(cesiumExtentPoints.length+1).fill(highest),
+          material: Cesium.Color.WHITE.withAlpha(0.5),
+          outline:true,
+        },
+      });
+      // 添加填充示意
+      const fillPolygon = viewer.entities.add({
+        polygon: {
+          hierarchy: cesiumExtentPoints,
+          material: Cesium.Color.LIGHTBLUE.withAlpha(0.7),
+          extrudedHeight: level,
+        }
+      });
+      // 计算面积和单个取样点面积
+      const area = turf.area(turfPolygon).toFixed(3);
+      const diffArea = area / cesiumSamplePoints.length;
+      // 根据每个取样点与平整高程的差，累加挖方量和填方量
+      let cut = 0;
+      let fill = 0;
+      cesiumSamplePoints.forEach(point=>{
+        if (point.height > level) {
+          cut += (point.height - level) * diffArea;
+        } else if (point.height < level) {
+          fill += (level - point.height) * diffArea;
+        }
+      });
+      cut = cut.toFixed(3);
+      fill = fill.toFixed(3);
+      setTimeout(()=>{
+        alert(`Highest: ${highest}; Lowest: ${lowest}; Area: ${area}; Cut: ${cut}; Fill: ${fill}`)
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

@@ -138,4 +138,4 @@ function calcResolutionForDistance(distance, latitude, scene, projection) {
 
 ## 示例
 
-[ol-cesium视角同步示例代码](https://kaifeiji.cc/demos/ol-cesium.html)
+[ol-cesium视角同步示例代码](/post-attach/ol-cesium.html)
