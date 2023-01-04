@@ -4,7 +4,7 @@ date: 2021-05-11 16:52:55
 categories:
 - 前端
 tags:
-- Javascript
+- JavaScript
 - Symbol
 - 接口
 - 翻译

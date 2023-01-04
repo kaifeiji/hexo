@@ -8,7 +8,7 @@ tags:
 - visibilitychange
 - 轮询
 - polling
-- Javascript
+- JavaScript
 ---
 
 虽然Websocket已经开始普及，但轮询仍有其应用场景。

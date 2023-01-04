@@ -5,7 +5,7 @@ categories:
 - 前端
 tags:
 - Vue
-- Javascript
+- JavaScript
 - event
 - bus
 - 翻译

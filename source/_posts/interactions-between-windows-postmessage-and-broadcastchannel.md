@@ -4,7 +4,7 @@ date: 2021-07-08 12:58:07
 categories:
 - 前端
 tags:
-- Javascript
+- JavaScript
 - 通信
 ---
 

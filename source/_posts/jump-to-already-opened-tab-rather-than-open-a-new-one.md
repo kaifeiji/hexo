@@ -5,7 +5,7 @@ categories:
 - 前端
 tags:
 - window.open
-- Javascript
+- JavaScript
 - 页面跳转
 ---
 

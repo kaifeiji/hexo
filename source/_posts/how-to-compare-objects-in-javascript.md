@@ -4,7 +4,7 @@ date: 2022-12-30 17:44:43
 categories:
 - 前端
 tags:
-- Javascript
+- JavaScript
 - Object
 - Compare
 - 对象
@@ -13,7 +13,11 @@ tags:
 
 原文：[How to Compare Objects in JavaScript](https://masteringjs.io/tutorials/fundamentals/compare-objects)
 
-在Javascript中，对象是引用类型。这意味着，只有两个变量指向内存中的同一个对象时，它们才**严格相等**。
+JavaScript中有很多方法来比较对象。本文提供了JavaScript比较对象的三种方法，以及它们的优缺点。
+
+<!-- more -->
+
+在JavaScript中，对象是引用类型。这意味着，只有两个变量指向内存中的同一个对象时，它们才[严格相等](https://masteringjs.io/tutorials/fundamentals/equality)。
 
 ```javascript
 const o1 = { answer: 42 };
@@ -24,9 +28,7 @@ o1 === o2; // true, 相同引用
 o1 === o3; // false, 相同的key、value，但引用不同
 ```
 
-然而，如果你想检查两个对象是否包含相同的数据呢？换种说法，就是具有相同的key和value？这里提供了3种方法。
-
-<!-- more -->
+然而，如果你想检查两个[POJO](https://masteringjs.io/tutorials/fundamentals/pojo)是否包含相同的数据呢？换种说法，就是具有相同的key和value？这里提供了3种方法。
 
 ## key和value的浅层相等
 
@@ -71,7 +73,7 @@ const o2 = { name: { first: 'Arthur', lastName: 'Dent' }, planet: 'Earth' };
 objectsEqual(o1, o2); // false, 因为 `o1.name !== o2.name`
 ```
 
-你可以改造objectsEqual()，把它变成递归的，但是就必须小心无限递归问题。另一种比较两个对象是否深层相等的方法，就是用JSON.stringify()比较它们的JSON字符串：
+你可以改造`objectsEqual()`，把它变成递归的，但是就必须小心无限递归问题。另一种比较两个对象是否深层相等的方法，就是用[JSON.stringify()](https://masteringjs.io/tutorials/fundamentals/stringify)比较它们的JSON字符串：
 
 ```javascript
 const o1 = { name: { first: 'Arthur', lastName: 'Dent' }, planet: 'Earth' };
@@ -102,7 +104,7 @@ JSON.stringify(o1) === JSON.stringify(o2); // true
 
 ## 使用Lodash的isEqual()
 
-Lodash的isEqual()函数是比较两个对象的最成熟的方案。它充分考虑并处理了许多边界情况，避免了前两种方法的缺陷。
+[Lodash的isEqual()函数](https://lodash.com/docs/4.17.15#isEqual)是比较两个对象的最成熟的方案。它充分考虑并处理了许多边界情况，避免了前两种方法的缺陷。
 
 ```javascript
 const obj1 = {
@@ -124,7 +126,7 @@ Object.assign(obj2, { name: 'Will Riker', rank: 'Commander' });
 _.isEqual(obj1, obj2); // false
 ```
 
-isEqual()函数也巧妙的避免了无限递归问题。
+`isEqual()`函数也巧妙的避免了无限递归问题。
 
 ```javascript
 const obj1 = {};
@@ -136,4 +138,4 @@ obj2.circular = obj1;
 _.isEqual(obj1, obj2); // true
 ```
 
-如果你已经在项目中使用Lodash了，那么isEqual()就是比较两个对象是否深层相等的最佳方案。在一些不包含value为对象的情况下，浅层比较方案也可以满足使用。JSON.stringify()也可以在不使用Lodash时提供粗略的深层相等检查。但是，如果已经使用了Lodash，isEqual()是检查两个对象是否深层相等的最佳方案。
+如果你已经在项目中使用Lodash了，那么`isEqual()`就是比较两个对象是否深层相等的最佳方案。在一些不包含value为对象的情况下，浅层比较方案也可以满足使用。`JSON.stringify()`也可以在不使用Lodash时提供粗略的深层相等检查。但是，如果已经使用了Lodash，`isEqual()`是检查两个对象是否深层相等的最佳方案。
