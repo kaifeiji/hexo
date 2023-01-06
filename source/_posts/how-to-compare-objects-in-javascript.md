@@ -2,7 +2,7 @@
 title: JavaScript如何比较两个Object
 date: 2022-12-30 17:44:43
 categories:
-- 前端
+- Mastering Js
 tags:
 - JavaScript
 - Object

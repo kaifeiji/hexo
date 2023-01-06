@@ -2,7 +2,7 @@
 title: 掌握JavaScript-基础篇
 date: 2023-01-02 15:52:30
 categories:
-- 前端
+- Mastering Js
 tags:
 - Mastering JS
 - JavaScript
@@ -15,7 +15,9 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
-[Javascript计算标准差](/post/calculate-standard-deviation-in-javascript/)
+[JavaScript中in和hasOwnProperty的区别](/post/the-difference-between-in-and-hasownproperty-in-javascript/)
+
+[JavaScript计算标准差](/post/calculate-standard-deviation-in-javascript/)
 
 [理解JavaScript中的valueOf()](/post/understand-valueof-in-javascript/)
 
