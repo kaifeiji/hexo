@@ -2,7 +2,7 @@
 title: Javascript计算标准差
 date: 2023-01-04 19:43:49
 categories:
-- Mastering Js
+- Mastering JS
 tags:
 - Javascript
 - 标准差

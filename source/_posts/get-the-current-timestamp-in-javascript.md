@@ -2,7 +2,7 @@
 title: JavaScript获取当前时间戳
 date: 2023-01-02 15:55:50
 categories:
-- Mastering Js
+- Mastering JS
 tags:
 - 时间戳
 - JavaScript
