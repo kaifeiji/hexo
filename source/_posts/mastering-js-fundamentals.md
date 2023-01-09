@@ -19,6 +19,8 @@ top: true
 
 [JavaScript中in和hasOwnProperty的区别](/post/the-difference-between-in-and-hasownproperty-in-javascript/)
 
+[使用原生JavaScript格式化日期](/post/format-dates-using-vanilla-javascript/)
+
 [JavaScript计算标准差](/post/calculate-standard-deviation-in-javascript/)
 
 [理解JavaScript中的valueOf()](/post/understand-valueof-in-javascript/)
