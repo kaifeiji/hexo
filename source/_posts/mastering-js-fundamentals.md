@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript比较两个字符串](https://masteringjs.io/tutorials/fundamentals/string-compare)
+
 [JavaScript检查字符串是否包含子字符串](/post/check-if-a-string-contains-a-substring-in-javascript/)
 
 [JavaScript中forEach()8个简洁的例子](/post/8-neat-examples-with-foreach-in-javascript/)
