@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript检查字符串是否包含子字符串](/post/check-if-a-string-contains-a-substring-in-javascript/)
+
 [JavaScript中forEach()8个简洁的例子](/post/8-neat-examples-with-foreach-in-javascript/)
 
 [JavaScript中in和hasOwnProperty的区别](/post/the-difference-between-in-and-hasownproperty-in-javascript/)
