@@ -15,7 +15,9 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
-[JavaScript比较两个字符串](https://masteringjs.io/tutorials/fundamentals/string-compare)
+[JavaScript的Map](/post/maps-in-javascript)
+
+[JavaScript比较两个字符串](/post/compare-two-strings-in-javascript/)
 
 [JavaScript检查字符串是否包含子字符串](/post/check-if-a-string-contains-a-substring-in-javascript/)
 
