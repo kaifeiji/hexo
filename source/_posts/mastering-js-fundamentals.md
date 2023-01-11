@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript的数组排序](/post/sorting-an-array-in-javascript/)
+
 [JavaScript的Map](/post/maps-in-javascript)
 
 [JavaScript比较两个字符串](/post/compare-two-strings-in-javascript/)
