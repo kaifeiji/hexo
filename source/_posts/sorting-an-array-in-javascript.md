@@ -8,6 +8,8 @@ tags:
 - sort
 ---
 
+原文：[Sorting an Array in JavaScript](https://masteringjs.io/tutorials/fundamentals/array-sort)
+
 学习如何使用JavaScript内置的Array#sort()函数。
 
 <!-- more -->

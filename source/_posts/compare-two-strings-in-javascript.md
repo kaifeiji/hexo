@@ -8,6 +8,8 @@ tags:
 - 对比
 ---
 
+原文：[Compare Two Strings in JavaScript](https://masteringjs.io/tutorials/fundamentals/string-compare)
+
 学习如何比较两个字符串：哪个更大、更小或相等。
 
 <!-- more -->

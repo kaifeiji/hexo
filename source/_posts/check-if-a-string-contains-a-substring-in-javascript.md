@@ -8,6 +8,8 @@ tags:
 - Substring
 ---
 
+原文：[Check if a String Contains a Substring in JavaScript](https://masteringjs.io/tutorials/fundamentals/contains-substring)
+
 学习使用原生JavaScript检查字符串是否包含子字符串。
 
 <!-- more -->

@@ -8,6 +8,8 @@ tags:
 - 遍历
 ---
 
+原文：[8 Neat Examples with forEach() in JavaScript](https://masteringjs.io/tutorials/fundamentals/foreach-examples)
+
 学习如何使用JavaScript的forEach()遍历嵌套数组、对象的key和其他类型。
 
 <!-- more -->

@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript替换字符串中所有给定子字符串](/post/replace-all-instances-of-a-string-in-javascript/)
+
 [JavaScript的数组排序](/post/sorting-an-array-in-javascript/)
 
 [JavaScript的Map](/post/maps-in-javascript)

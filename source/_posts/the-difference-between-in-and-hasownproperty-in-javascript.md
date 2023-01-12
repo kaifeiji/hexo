@@ -8,6 +8,8 @@ tags:
 - hasOwnProperty
 ---
 
+原文：[The Difference Between in and hasOwnProperty in JavaScript](https://masteringjs.io/tutorials/fundamentals/hasownproperty)
+
 JavaScript中检查对象中是否包含指定key的两种方法。
 
 <!-- more -->

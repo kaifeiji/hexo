@@ -7,6 +7,8 @@ tags:
 - Map
 ---
 
+原文：[Maps in JavaScript](https://masteringjs.io/tutorials/fundamentals/map)
+
 学习如何使用ES6的Map。
 
 <!-- more -->
