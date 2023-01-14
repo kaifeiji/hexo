@@ -15,6 +15,10 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[理解JavaScript中的Array.splice()](/post/understanding-array-splice-in-javascript/)
+
+[JavaScript中substring、substr和slice的区别](/post/substring-vs-substr-vs-slice-in-javascript/)
+
 [JavaScript替换字符串中所有给定子字符串](/post/replace-all-instances-of-a-string-in-javascript/)
 
 [JavaScript的数组排序](/post/sorting-an-array-in-javascript/)
