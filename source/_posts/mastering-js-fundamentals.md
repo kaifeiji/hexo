@@ -15,6 +15,10 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[理解JavaScript的回调机制](/post/understanding-callbacks-in-javascript/)
+
+[JavaScript的Object.keys()函数概览](/post/an-overview-of-the-object-keys-function-in-javascript/)
+
 [理解JavaScript中的Array.splice()](/post/understanding-array-splice-in-javascript/)
 
 [JavaScript中substring、substr和slice的区别](/post/substring-vs-substr-vs-slice-in-javascript/)
