@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[Javascript中“use strict”的作用](/post/what-does-use-strict-do-in-javascript/)
+
 [理解JavaScript的回调机制](/post/understanding-callbacks-in-javascript/)
 
 [JavaScript的Object.keys()函数概览](/post/an-overview-of-the-object-keys-function-in-javascript/)
