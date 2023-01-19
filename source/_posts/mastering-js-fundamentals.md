@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript的箭头函数](/post/array-function-in-javascript/)
+
 [用Object.freeze()使JavaScript对象不可变](/post/make-javascript-objects-immutable-with-object-freeze/)
 
 [Javascript中“use strict”的作用](/post/what-does-use-strict-do-in-javascript/)
