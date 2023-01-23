@@ -15,9 +15,11 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript数组的push教程](/post/javascript-array-push-tutorial/)
+
 [检查JS数组是否包含特定值](/post/check-if-a-js-array-contains-a-specific-value/)
 
-[JavaScript的箭头函数](/post/array-function-in-javascript/)
+[JavaScript的箭头函数](/post/arrow-function-in-javascript/)
 
 [用Object.freeze()使JavaScript对象不可变](/post/make-javascript-objects-immutable-with-object-freeze/)
 

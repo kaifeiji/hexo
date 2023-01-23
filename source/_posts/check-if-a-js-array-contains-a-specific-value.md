@@ -7,6 +7,8 @@ tags:
 - Array
 ---
 
+原文：[Check if a JS Array Contains a Specific Value](https://masteringjs.io/tutorials/fundamentals/includes)
+
 检查JavaScript数组是否包含某个值，有两种常见方法：`includes()`和`indexOf()`。本文展示了如何使用二者，以及二者分别适用的场景。
 
 <!-- more -->
