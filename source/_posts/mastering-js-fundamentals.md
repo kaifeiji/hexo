@@ -15,6 +15,10 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript中void 0的作用](/post/what-does-void-0-do-in-javascript/)
+
+[JavaScript的表达式](/post/what-is-a-javascript-expression/)
+
 [JavaScript数组的push教程](/post/javascript-array-push-tutorial/)
 
 [检查JS数组是否包含特定值](/post/check-if-a-js-array-contains-a-specific-value/)
