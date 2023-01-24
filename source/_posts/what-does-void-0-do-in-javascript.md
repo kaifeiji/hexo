@@ -59,7 +59,7 @@ SyntaxError: Unexpected token void
 声明一个函数并在同一个语句执行函数，一般需要用圆括号括起来，[强制JavaScript将函数声明作为表达式进行处理](https://masteringjs.io/tutorials/fundamentals/expressions#immediately-invoked-function-expressions-iifes)。
 
 ```javascript
-(function() { console.log('Hello, World'); })(); // Prints "Hello, World"
+(function() { console.log('Hello, World'); })(); // 打印 "Hello, World"
 ```
 
 有时候`void`运算符可以替代圆括号。`void`是一元运算符，JavaScript将它之后的函数声明作为表达式处理，因此以下代码打印“Hello, World”。
