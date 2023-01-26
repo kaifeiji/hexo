@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript中的Object.assign()](/post/object-assign-in-javascript/)
+
 [JavaScript拼接字符串3种方法](/post/3-ways-to-concatenate-string-in-javascript/)
 
 [JavaScript字符串首字母大写](/post/capitalize-the-first-letter-of-a-string-in-javascript/)
