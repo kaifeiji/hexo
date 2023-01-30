@@ -15,6 +15,8 @@ top: true
 
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
+[JavaScript的JSON.stringify()](/post/json-stringify-in-javascript/)
+
 [JavaScript的Object.seal()](/post/object-seal-in-javascript/)
 
 [JavaScript对象的原型（prototype）简介](/post/intro-to-object-prototypes-in-javascript/)
