@@ -7,6 +7,8 @@ tags:
 - Object.freeze
 ---
 
+原文：[Make JavaScript Objects Immutable with Object.freeze()](https://masteringjs.io/tutorials/fundamentals/freeze)
+
 `const`关键字并不能防止对象属性的修改，而Object.freeze()函数可以实现，但会带有警告。
 
 <!-- more -->
