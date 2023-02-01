@@ -46,6 +46,12 @@ top: true
 
 ---
 
+[JavaScript的instanceof操作符](/post/the-instanceof-operator-in-javascript/)
+
+> `instanceof`运算符可以确定一个对象是否是一个类的实例。
+
+---
+
 [JavaScript的类](/post/classes-in-javascript/)
 
 > 从ES6/2015开始，JavaScript新增了面向对象编程的内置关键字`class`。本文介绍了它的工作原理。
