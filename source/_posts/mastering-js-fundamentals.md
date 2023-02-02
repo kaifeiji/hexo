@@ -46,6 +46,12 @@ top: true
 
 ---
 
+[JavaScript的Promise](/post/promises-in-javascript/)
+
+> Promise是一个代表异步操作的对象，它是JavaScript的基础并发原语。本文讲解了相关知识。
+
+---
+
 [JavaScript的instanceof操作符](/post/the-instanceof-operator-in-javascript/)
 
 > `instanceof`运算符可以确定一个对象是否是一个类的实例。
