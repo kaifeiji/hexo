@@ -46,6 +46,18 @@ top: true
 
 ---
 
+[CORS（跨域资源共享）的简单总解](/post/a-brief-overview-of-cross-origin-resource-sharing-cors/)
+
+> 跨域资源共享，简写为CORS，是浏览器端的一项协议，用于确定从其他域请求一个资源是否安全。本文简要介绍。
+
+---
+
+[POJO（Plain Old JavaScript Object）是什么](/post/what-is-a-plain-old-javascript-object-pojo/)
+
+> POJO是JavaScript存储用户输入数据最常用的方式，如何确切定义POJO呢？
+
+---
+
 [JavaScript中Promise的then()函数](/post/the-promise-then-function-in-javascript/)
 
 > `then()`函数是JavaScript的Promise交互的主要方式，是Promise链式语法的一部分。
