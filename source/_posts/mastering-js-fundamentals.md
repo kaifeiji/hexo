@@ -46,6 +46,12 @@ top: true
 
 ---
 
+[JavaScript中Promise的then()函数](/post/the-promise-then-function-in-javascript/)
+
+> `then()`函数是JavaScript的Promise交互的主要方式，是Promise链式语法的一部分。
+
+---
+
 [JavaScript的Promise](/post/promises-in-javascript/)
 
 > Promise是一个代表异步操作的对象，它是JavaScript的基础并发原语。本文讲解了相关知识。
