@@ -46,6 +46,12 @@ top: true
 
 ---
 
+[让JavaScript函数暂停一段时间](/post/making-a-javascript-function-sleep/)
+
+> JavaScript没有内置的`sleep()`函数，但也可以通过其他方式让函数暂停一段时间。
+
+---
+
 [CORS（跨域资源共享）的简单总解](/post/a-brief-overview-of-cross-origin-resource-sharing-cors/)
 
 > 跨域资源共享，简写为CORS，是浏览器端的一项协议，用于确定从其他域请求一个资源是否安全。本文简要介绍。
