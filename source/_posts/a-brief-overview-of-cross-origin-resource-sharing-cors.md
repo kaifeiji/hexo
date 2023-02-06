@@ -1,5 +1,5 @@
 ---
-title: CORS（跨域资源共享）的简单总解
+title: CORS（跨域资源共享）的简单总结
 date: 2023-02-03 16:48:23
 categories:
 - Mastering JS

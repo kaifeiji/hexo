@@ -52,7 +52,7 @@ top: true
 
 ---
 
-[CORS（跨域资源共享）的简单总解](/post/a-brief-overview-of-cross-origin-resource-sharing-cors/)
+[CORS（跨域资源共享）的简单总结](/post/a-brief-overview-of-cross-origin-resource-sharing-cors/)
 
 > 跨域资源共享，简写为CORS，是浏览器端的一项协议，用于确定从其他域请求一个资源是否安全。本文简要介绍。
 
