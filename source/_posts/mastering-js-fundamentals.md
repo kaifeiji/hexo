@@ -46,6 +46,12 @@ top: true
 
 ---
 
+[JavaScript数组的filter()](/post/array-filter-in-javascript/)
+
+> JavaScript的数组函数filter()可以筛选出符合指定条件的数组元素，本文简述该函数的使用。
+
+---
+
 [让JavaScript函数暂停一段时间](/post/making-a-javascript-function-sleep/)
 
 > JavaScript没有内置的`sleep()`函数，但也可以通过其他方式让函数暂停一段时间。
