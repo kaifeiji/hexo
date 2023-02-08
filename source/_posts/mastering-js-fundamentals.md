@@ -46,6 +46,11 @@ top: true
 
 ---
 
+[JavaScript中的“假”值是什么](/post/what-is-falsy-in-javascript/)
+
+> JavaScript的类型强制转换导致代码很容易出错，但如果理解了基本原理，可以省去很多无用的类型检查。本文简述了“假”值。
+
+---
 [JavaScript数组的filter()](/post/array-filter-in-javascript/)
 
 > JavaScript的数组函数filter()可以筛选出符合指定条件的数组元素，本文简述该函数的使用。
