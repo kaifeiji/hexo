@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript的真值](/post/truthy-values-in-javascript/)
+
+> JavaScript的if条件不一定是Boolean值，可以是任何类型的值。内置的强制类型转换接收到一个真值，会转换为true。
+
+---
+
 [JavaScript的逻辑运算符](/post/logical-operators-in-javascript/)
 
 > JavaScript有3个逻辑运算符：`&&`、`||`和`!`。这三个运算符常用在`if`语句，本文介绍了逻辑运算符其他的一些神奇的用法。
