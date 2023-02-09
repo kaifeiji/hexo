@@ -46,6 +46,12 @@ top: true
 
 ---
 
+[JavaScript的逻辑运算符](/post/logical-operators-in-javascript/)
+
+> JavaScript有3个逻辑运算符：`&&`、`||`和`!`。这三个运算符常用在`if`语句，本文介绍了逻辑运算符其他的一些神奇的用法。
+
+---
+
 [JavaScript中的“假”值是什么](/post/what-is-falsy-in-javascript/)
 
 > JavaScript的类型强制转换导致代码很容易出错，但如果理解了基本原理，可以省去很多无用的类型检查。本文简述了“假”值。
