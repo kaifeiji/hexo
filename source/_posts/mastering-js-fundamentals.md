@@ -45,6 +45,18 @@ top: true
 
 ---
 
+[JavaScript的静态属性和函数](/post/static-properties-and-functions-in-javascript/)
+
+> `static`关键字可以在ES6的类中定义静态属性和函数。
+
+---
+
+[JavaScript的取余运算符](/post/the-modulus-operator-in-javascript/)
+
+> JavaScript的取余运算符返回第一个数除以第二个数的余数。
+
+---
+
 [JavaScript的真值](/post/truthy-values-in-javascript/)
 
 > JavaScript的if条件不一定是Boolean值，可以是任何类型的值。内置的强制类型转换接收到一个真值，会转换为true。
