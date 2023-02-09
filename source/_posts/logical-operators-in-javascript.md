@@ -23,7 +23,7 @@ JavaScript有3种[逻辑运算符](https://developer.mozilla.org/en-US/docs/Web/
 
 * `false`
 * `0`
-* `0n`: [BigInt](http://thecodebarbarian.com/an-overview-of-bigint-in-node-js.html) 0 
+* `0n`: [BigInt](http://thecodebarbarian.com/an-overview-of-bigint-in-node-js.html) 0
 * `''`: 空字符串
 * `null`
 * `undefined`
