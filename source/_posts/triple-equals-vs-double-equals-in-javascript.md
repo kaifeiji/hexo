@@ -4,8 +4,7 @@ date: 2023-02-11 16:52:47
 categories:
 - Mastering JS
 tags:
-- ==
-- ===
+- equal
 ---
 
 原文：[Triple Equals vs Double Equals in JavaScript](https://masteringjs.io/tutorials/fundamentals/equals)
