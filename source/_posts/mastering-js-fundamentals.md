@@ -10,7 +10,7 @@ top: true
 ---
 
 > Mastering JS创建于2019年4月，旨在帮助JavaScript开发者解决日常问题。市面上，太多千篇一律的从零构建APP，或者钻牛角尖的八股文。Mastering JS提供了简洁的教程和有效的工具，帮助开发者快速的解决问题。
-> Mastering JS是[Valeri Karpov](https://twitter.com/code_barbarian)，[Mongoose](https://mongoosejs.com/)的维护者，在美国弗罗里达州迈阿密摊创建的。Mastering JS属于MeanIT Software的产品之一，MeanIT Software是聚焦于JavaScript的软件发行商。
+> Mastering JS是[Valeri Karpov](https://twitter.com/code_barbarian)，[Mongoose](https://mongoosejs.com/)的维护者，在美国弗罗里达州迈阿密滩创建的。Mastering JS属于MeanIT Software的产品之一，MeanIT Software是聚焦于JavaScript的软件发行商。
 
 <!-- more -->
 
