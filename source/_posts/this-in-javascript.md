@@ -13,7 +13,7 @@ tags:
 
 <!-- more -->
 
-`this`关键字可以引用函数的“执行上下文”。一个巧妙的说法是，`this`指向了调用函数时，函数所属的对象。
+[`this`关键字](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)可以引用函数的“执行上下文”。一个巧妙的说法是，`this`指向了调用函数所属的对象。
 
 ```javascript
 // `this`是函数的隐性参数
@@ -32,23 +32,28 @@ obj2.fn() === obj1; // false
 obj2.fn() === obj2; // true
 ```
 
-The important thing to note is that, since functions are plain old variables in JavaScript, this may change. One common way to mess up the value of this is to assign a function to an object and call the function without an associated object. This is informally known as the function losing its context.
+需要重点关注的是，JavaScript的函数也是普通的变量，`this`是可以改变的。一个常见的搞混`this`的场景：把函数赋给一个对象，但调用函数时不用对象调用。这种俗称函数[“丢失上下文”](https://www.freecodecamp.org/news/what-to-do-when-this-loses-context-f09664af076f/)。
 
+```javascript
 const fn = function() {
   return this;
 };
 
 const obj = { fn };
 
-// If you call `fn()` without a property access `.`, you're
-// implicitly setting the function context to `null`.
+// 如果不用属性访问符`.`调用`fn()`
+// 就是隐式的将函数上下文设为`null`
 const myFn = obj.fn;
-myFn() == null; // true in strict mode
-TLDR: this is an implicit parameter to a function call. It contains whatever object the function was a property of when it was called.
+myFn() == null; // 严格模式下为true
+```
 
-With Classes
-You will often see this in ES6 class methods. In a class method, this refers to the instance of the object the method is called on.
+简言之：`this`是函数调用时的隐性参数，当属于某个对象的函数调用时，`this`就是这个对象。
 
+## [类](https://masteringjs.io/tutorials/fundamentals/class)
+
+在ES6的类方法中，经常能见到`this`。在一个类方法中，`this`指向了调用方法所属的对象实例。
+
+```javascript
 class MyClass {
   myFunction() {
     return this;
@@ -58,24 +63,32 @@ class MyClass {
 const obj = new MyClass();
 
 obj.myFunction() === obj; // true
-Arrow Functions
-Arrow functions are special because, unlike other functions, they have lexical context. That means this in an arrow function is the same as this outside the arrow function, regardless of how you call the arrow function.
+```
 
+## 箭头函数
+
+箭头函数不同于其他函数，它属于*词法上下文*。这意味着无论是以何种方式调用箭头函数，箭头函数中的`this`与箭头函数外的保持一致。
+
+```javascript
 const arrow = () => this;
 
 arrow() == null; // true
 
 const obj = { arrow };
 
-// Even though `arrow()` is attached to an object, it still
-// has the same context as the surrounding block.
+// 即使`arrow()`绑定到一个对象
+// 它依然与上下文有相同的`this`
 obj.arrow() == null; // true
 obj.arrow() == this; // true
-Using bind(), call(), and apply()
-Every JavaScript function has a Function#call() function and a Function#apply() function that lets you set the value of this without explicitly attaching the function to an object. You can think of call() and apply() as letting you set the implicit parameter this explicitly.
+```
 
-There is also a Function#bind() function that creates a copy of the function with a pre-set context.
+## bind()、call()和apply()
 
+每个JavaScript函数都有[`Function#call()`函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)和[`Function#apply()`函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)，可以不必绑定对象就能指定`this`的值。`call()`和`apply()`将隐性参数`this`变成了显性参数。
+
+另外[`Function#bind()`函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)可以创建一个预设`this`的函数副本。
+
+```javascript
 const fn = function() {
   return this;
 };
@@ -88,3 +101,4 @@ fn.apply(obj) === obj; // true
 const copy = fn.bind(obj);
 copy() === obj; // true
 copy === fn; // false
+```
