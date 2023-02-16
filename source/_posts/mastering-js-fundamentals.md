@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript的switch/case语句](/post/the-switch-case-statement-in-javascript/)
+
+> switch语句就像多个叠加的if语句，可以在不同条件执行不同的代码。本文展示了如何使用switch/case语句。
+
+---
+
 [JavaScript的this](/post/this-in-javascript/)
 
 > `this`关键字，也称为函数的“上下文”或“范围”，是一个强大的也令人迷惑的概念。本文帮你捋清思路。
