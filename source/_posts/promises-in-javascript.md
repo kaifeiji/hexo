@@ -38,7 +38,7 @@ promise.then(res => {
 * **Fulfilled**：操作成功完成。
 * **Rejected**：操作发生错误。
 
-![](/post-images/promises-in-javascript-2023-02-02-19-17-10.png)
+![Promise状态](/post-images/promises-in-javascript-2023-02-02-19-17-10.png)
 
 当`Promise`创建时，它的状态总是`pending`。一旦`Promise`变成`fulfilled`或`rejected`，那么它可以被认为是处理完成，不会再改变状态了。`Promise`的状态是一个私有属性：任何一个`Promise`，没有简单的方法可以判断它的当前状态。
 
