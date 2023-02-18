@@ -44,6 +44,12 @@ top: true
 > JavaScript中有很多方法来比较对象。本文提供了JavaScript比较对象的三种方法，以及它们的优缺点。
 ---
 
+[JavaScript中Promise的resolve](/post/resolve-a-promise-in-javascript/)
+
+> 在JavaScript的Promise中，resolve一个值时，会将Promise状态标记为fulfilled。
+
+---
+
 [JavaScript的Promise.all()函数](/post/the-promise-all-function-in-javascript/)
 
 > `Promise.all()`函数可以并行执行多个Promise，然后收集执行结果。
