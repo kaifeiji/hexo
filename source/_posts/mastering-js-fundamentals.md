@@ -44,6 +44,12 @@ top: true
 > JavaScript中有很多方法来比较对象。本文提供了JavaScript比较对象的三种方法，以及它们的优缺点。
 ---
 
+[理解JavaScript中new Promise](/post/understanding-new-promise-in-javascript/)
+
+> 在使用`new Promise`时，调用的时Promise的constructor。本文介绍了Promise constructor的专业用法。
+
+---
+
 [JavaScript中Promise的resolve](/post/resolve-a-promise-in-javascript/)
 
 > 在JavaScript的Promise中，resolve一个值时，会将Promise状态标记为fulfilled。
