@@ -2,7 +2,9 @@
 title: JavaScript的Promise.all()函数
 date: 2023-02-17 22:55:53
 categories:
+- Mastering JS
 tags:
+- Promise.all
 ---
 
 原文：[The `Promise.all()` Function in JavaScript](https://masteringjs.io/tutorials/fundamentals/promise-all)
