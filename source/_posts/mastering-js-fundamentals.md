@@ -42,6 +42,13 @@ top: true
 [JavaScript如何比较两个Object](/post/how-to-compare-objects-in-javascript/)
 
 > JavaScript中有很多方法来比较对象。本文提供了JavaScript比较对象的三种方法，以及它们的优缺点。
+
+---
+
+[理解JavaScript中async/await](/post/understanding-async-await-in-javascript/)
+
+> async/await可以以同步的方式写异步代码，没有回调函数或Promise链，只有`for`循环和`if`语句。
+
 ---
 
 [理解JavaScript中new Promise](/post/understanding-new-promise-in-javascript/)
