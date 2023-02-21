@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[有限状态机的实用介绍](/post/a-practial-introduction-to-finit-state-machines/)
+
+> 状态机乍一看像是无趣的抽象话题，但它对JavaScript开发者来说非常有用。
+
+---
+
 [理解JavaScript中async/await](/post/understanding-async-await-in-javascript/)
 
 > async/await可以以同步的方式写异步代码，没有回调函数或Promise链，只有`for`循环和`if`语句。
