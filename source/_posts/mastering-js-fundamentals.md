@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[Puppeteer简介](/post/introduction-to-puppeteer/)
+
+> Puppeteer使用真实浏览器测试JavaScript应用，是非常好的工具。
+
+---
+
 [有限状态机的实用介绍](/post/a-practial-introduction-to-finit-state-machines/)
 
 > 状态机乍一看像是无趣的抽象话题，但它对JavaScript开发者来说非常有用。
