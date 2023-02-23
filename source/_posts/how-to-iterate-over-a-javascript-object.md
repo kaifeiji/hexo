@@ -7,77 +7,92 @@ tags:
 - 遍历
 ---
 
-原文：[How to Iterate Over a JavaScript Object]()
+原文：[How to Iterate Over a JavaScript Object](https://masteringjs.io/tutorials/fundamentals/iterate-object)
 
 有许多种方法可以遍历JavaScript对象的所有key和value。本文介绍3种方法和它们的优缺点。
 
 <!-- more -->
 
-Suppose you have a simple JavaScript object:
+有一个简单的JavaScript对象：
 
+```javascript
 const obj = {
   name: 'Luke Skywalker',
   title: 'Jedi Knight',
   age: 23
 };
-How do you iterate over the key/value pairs and print out "name: Luke Skywalker", "title: Jedi Knight", and "age: 23"? There are a lot of ways to do this in modern JavaScript. Here's 3 different ways:
+```
 
-Using Object.entries()
-The Object.entries() function returns an arrau coontaining the object's key/value pairs. Here's how you would print out the key/value pairs using Object.entries() and a for/of loop.
+如何遍历key/value对，并打印“name: Luke Skywalker”、“title: Jedi Knight”和“age: 23”？现代JavaScript种有许多方法实现，本文介绍了3种不同的方法：
 
+## [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+
+`Object.entries()`函数返回一个数组，其中包含对象的key/value对。使用`Object.entries()`和[`for/of`循环](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript)，可以打印key/value对。
+
+```javascript
 const obj = {
   name: 'Luke Skywalker',
   title: 'Jedi Knight',
   age: 23
 };
 
-// Prints out:
+// 打印：
 // 'name: Luke Skywalker'
 // 'title: Jedi Knight'
 // 'age: 23'
 for (const [key, value] of Object.entries(obj)) {
   console.log(`${key}: ${value}`);
 }
-In JavaScript, an entry is an array with exactly 2 elements, where the first element is the key and the second element is the value. The entry pattern shows up in several other places in JavaScript, like the Map constructor and Object.fromEntries().
+```
 
-If you convert the iterator that Object.entries() returns into an array using Array.from(), you'll get an array containing the object's key/value pairs.
+Object.entries(obj)返回的数组，其中每个都包含2个元素，第一个是`key`，第二个是`value`。这种模式在JavaScript中很常见，例如[Map的constructor](https://thecodebarbarian.com/the-80-20-guide-to-maps-in-javascript.html)和[`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)。
 
+如果用`Array.from()`将`Object.entries()`返回的迭代器转换为数组，数组中包含的就是对象的key/value对。
+
+```javascript
 const obj = {
   name: 'Luke Skywalker',
   title: 'Jedi Knight',
   age: 23
 };
 
-const keyValuePairs = Object.entries(obj);
+const keyValuePairs = Array.from(Object.entries(obj));
 keyValuePairs[0]; // ['name', 'Luke Skywalker']
 keyValuePairs[1]; // ['title', 'Jedi Knight']
 keyValuePairs[2]; // ['age', 23]
-Using Object.keys()
-The Object.keys() function returns an array of the object's keys, as opposed to both the keys and the values. You can then use square brackets [] to get the object's values.
+```
 
+## [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+
+`Object.keys()`函数返回对象key的数组，而不是key/value对。可以用方括号`[]`获取对象的value。
+
+```javascript
 const obj = {
   name: 'Luke Skywalker',
   title: 'Jedi Knight',
   age: 23
 };
 
-// Prints out:
+// 打印
 // 'name: Luke Skywalker'
 // 'title: Jedi Knight'
 // 'age: 23'
 for (const key of Object.keys(obj)) {
   console.log(`${key}: ${obj[key]}`);
 }
-Why use Object.keys() versus Object.entries()? Because you can't change the value in an entry to change the value in the object.
+```
 
+有了`Object.entries()`为什么还要有`Object.keys()`？因为entry中的值是无法改变对象中的值的。
+
+```javascript
 const obj = {
   name: 'Luke Skywalker',
   title: 'Jedi Knight',
   age: 23
 };
 
-// Assigning to `value` does **not** change the property
-// value! You need to do `obj[key] = newValue`
+// 设置`value`不能改变属性值
+// 需要设置`obj[key] = 新的值`
 for (let [key, value] of Object.entries(obj)) {
   if (key === 'title') {
     value = 'Jedi Master';
@@ -85,37 +100,39 @@ for (let [key, value] of Object.entries(obj)) {
 }
 obj.title; // 'Jedi Knight'
 
-// Works!
+// 可以修改！
 for (const key of Object.keys(obj)) {
   if (key === 'title') {
     obj[key] = 'Jedi Master';
   }
 }
-With for/in
-The Object.keys() and Object.entries() functions only loop over an object's own properties. For a POJO, this distinction doesn't matter. But when you use inheritance, this distinction can be important.
+```
 
-Using a for/in loop lets you iterate over all an object's keys, including inherited keys.
+## for/in
 
+`Object.keys()`和`Object.entries()`只会循环[对象自身的属性](https://masteringjs.io/tutorials/fundamentals/hasownproperty)。对于[POJO](https://masteringjs.io/tutorials/fundamentals/pojo)而言，区别不大，但在遇到[继承](https://thecodebarbarian.com/an-overview-of-es6-classes#inheritance)的情况，可能会有一些问题。`for/in`循环可以遍历对象的所有key，包括继承的key。
+
+```javascript
 function JediKnight(name, age) {
   this.name = name;
   this.age = age;
 }
-// `title` is an inherited property for instances of the
-// `Jedi Knight` class.
+// `JediKnight`类的实例会继承属性`title`
 JediKnight.prototype.title = 'Jedi Knight';
 
 const obj = new JediKnight('Luke Skywalker', 23);
 
-// `entries` will **not** include the `title` property
+// `entries`不包括`title`属性
 const entries = Object.entries(obj);
 entries; // [['name', 'Luke Skywalker'], ['age', '23']]
 
-// Includes `title`, because `for/in` also loops over
-// inheritted properties.
+// 包括`title`因为`for/in`会遍历继承属性。
 // 'name: Luke Skywalker'
 // 'age: 23'
 // 'title: Jedi Knight'
 for (const key in obj) {
   console.log(`${key}: ${obj[key]}`);
 }
-Generally speaking, you should use Object.keys() or Object.entries() with POJOs to avoid accidentally picking up inheritted properties. But you can use for/in if you're sure you want to loop over inheritted properties.
+```
+
+一般来说，应该使用`Object.keys()`或`Object.entries()`遍历POJO，避免意外取到继承属性。但如果确实需要遍历继承属性，就需要用`for/in`了。
