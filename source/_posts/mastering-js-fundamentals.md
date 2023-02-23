@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[如何遍历JavaScript的对象](/post/how-to-iterate-over-a-javascript-object/)
+
+> 有许多种方法可以遍历JavaScript对象的所有key和value。本文介绍3种方法和它们的优缺点。
+
+---
+
 [Puppeteer简介](/post/introduction-to-puppeteer/)
 
 > Puppeteer使用真实浏览器测试JavaScript应用，是非常好的工具。
