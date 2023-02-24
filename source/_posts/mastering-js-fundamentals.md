@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript对象数组排序](/post/sort-an-array-of-objects-in-javascript/)
+
+> JavaScript的内置`sort`函数可以用属性将对象数组进行排序。
+
+---
+
 [如何遍历JavaScript的对象](/post/how-to-iterate-over-a-javascript-object/)
 
 > 有许多种方法可以遍历JavaScript对象的所有key和value。本文介绍3种方法和它们的优缺点。
