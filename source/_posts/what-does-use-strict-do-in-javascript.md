@@ -1,5 +1,5 @@
 ---
-title: Javascript中“use strict”的作用
+title: JavaScript中“use strict”的作用
 date: 2023-01-17 23:41:30
 categories:
 - Mastering JS
@@ -9,7 +9,7 @@ tags:
 
 原文：[What Does "use strict" Do in JavaScript?](https://masteringjs.io/tutorials/fundamentals/strict)
 
-Javascript的“use strict”会开启严格模式。本文解释了何为严格模式。
+JavaScript的“use strict”会开启严格模式。本文解释了何为严格模式。
 
 <!-- more -->
 

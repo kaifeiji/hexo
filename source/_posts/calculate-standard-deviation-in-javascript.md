@@ -1,10 +1,10 @@
 ---
-title: Javascript计算标准差
+title: JavaScript计算标准差
 date: 2023-01-04 19:43:49
 categories:
 - Mastering JS
 tags:
-- Javascript
+- JavaScript
 - 标准差
 - Standard Deviation
 ---

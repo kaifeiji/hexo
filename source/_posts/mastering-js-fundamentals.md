@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript的typeof运算符](/post/the-typeof-operator-in-javascript/)
+
+> typeof运算符可以判断一个值的类型——number、string、object等。
+
+---
+
 [JavaScript对象数组排序](/post/sort-an-array-of-objects-in-javascript/)
 
 > JavaScript的内置`sort`函数可以用属性将对象数组进行排序。
@@ -272,9 +278,9 @@ top: true
 
 ---
 
-[Javascript中“use strict”的作用](/post/what-does-use-strict-do-in-javascript/)
+[JavaScript中“use strict”的作用](/post/what-does-use-strict-do-in-javascript/)
 
-> Javascript的“use strict”会开启严格模式。本文解释了何为严格模式。
+> JavaScript的“use strict”会开启严格模式。本文解释了何为严格模式。
 
 ---
 
