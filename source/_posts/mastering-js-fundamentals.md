@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript比较字符串](/post/compare-strings-in-javascript/)
+
+> JavaScript的比较运算符很容易比较字符串，另外还有`localeCompare()`可以用于排序。
+
+---
+
 [JavaScript的typeof运算符](/post/the-typeof-operator-in-javascript/)
 
 > typeof运算符可以判断一个值的类型——number、string、object等。
