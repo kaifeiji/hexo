@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript比较日期](/post/compare-dates-in-javascript/)
+
+> JavaScript比较日期不太容易，Date类型是对象，比较符按照引用而不是按值进行对比。本文简介如何用原生JavaScript比较日期。
+
+---
+
 [JavaScript比较字符串](/post/compare-strings-in-javascript/)
 
 > JavaScript的比较运算符很容易比较字符串，另外还有`localeCompare()`可以用于排序。
