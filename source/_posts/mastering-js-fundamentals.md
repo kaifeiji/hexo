@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript比较数组](/post/compare-arrays-in-javascript/)
+
+> JavaScript比较两个数组的一些技巧。
+
+---
+
 [JavaScript比较日期](/post/compare-dates-in-javascript/)
 
 > JavaScript比较日期不太容易，Date类型是对象，比较符按照引用而不是按值进行对比。本文简介如何用原生JavaScript比较日期。
