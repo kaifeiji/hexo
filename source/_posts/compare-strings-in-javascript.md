@@ -2,7 +2,9 @@
 title: JavaScript比较字符串
 date: 2023-02-26 23:24:15
 categories:
+- Mastering JS
 tags:
+- 字符串
 ---
 
 原文：[Compare Strings in JavaScript](https://masteringjs.io/tutorials/fundamentals/compare-strings)
