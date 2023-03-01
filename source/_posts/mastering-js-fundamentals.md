@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript中Promise的catch函数](/post/the-promise-catch-function-in-javascript/)
+
+> Promise的catch函数是一个很方便的语法糖，用于处理Promise中的错误。
+
+---
+
 [JavaScript比较数组](/post/compare-arrays-in-javascript/)
 
 > JavaScript比较两个数组的一些技巧。
