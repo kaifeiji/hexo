@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[JavaScript创建Promise](/post/javascript-create-promise/)
+
+> 本文简述JavaScript创建Promise的几种方式。
+
+---
+
 [JavaScript中Promise的catch函数](/post/the-promise-catch-function-in-javascript/)
 
 > Promise的catch函数是一个很方便的语法糖，用于处理Promise中的错误。
