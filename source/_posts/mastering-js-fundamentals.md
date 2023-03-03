@@ -45,6 +45,12 @@ top: true
 
 ---
 
+[使用bluebird操作Promise](/post/useing-bluebird-promises/)
+
+> blurbird是JavaScript一个流行的Promise库。
+
+---
+
 [JavaScript创建Promise](/post/javascript-create-promise/)
 
 > 本文简述JavaScript创建Promise的几种方式。
