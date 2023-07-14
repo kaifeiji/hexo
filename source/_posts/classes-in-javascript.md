@@ -3,6 +3,7 @@ title: JavaScript的类
 date: 2023-01-31 09:06:44
 categories:
 - Mastering JS
+hide: true
 tags:
 - 类
 ---

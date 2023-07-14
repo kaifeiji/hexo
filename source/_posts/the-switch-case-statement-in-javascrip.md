@@ -3,6 +3,7 @@ title: JavaScript的switch/case语句
 date: 2023-02-16 22:23:09
 categories:
 - Mastering JS
+hide: true
 tags:
 - switch
 - case

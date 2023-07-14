@@ -3,6 +3,7 @@ title: 用Object.freeze()使JavaScript对象不可变
 date: 2023-01-18 16:26:45
 categories:
 - Mastering JS
+hide: true
 tags:
 - Object.freeze
 ---

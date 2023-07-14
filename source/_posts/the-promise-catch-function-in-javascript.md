@@ -3,6 +3,7 @@ title: JavaScript中Promise的catch函数
 date: 2023-03-01 10:38:23
 categories:
 - Mastering JS
+hide: true
 tags:
 - catch
 ---

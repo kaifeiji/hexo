@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="viewport-fit=cover,width=device-width,initial-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#f4f4f4">
+  <meta name="description" content="Drag and drop using interact.js. Support resizing, snapping and aligning." />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://kaifeiji.cc/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://kaifeiji.cc/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://kaifeiji.cc/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://kaifeiji.cc/images/logo.svg" color="#222">
+  <title>Drag and drop using interact.js</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-width: -moz-available;
+      min-width: -webkit-fill-available;
+      min-width: fill-available;
+      min-height: -moz-available;
+      min-height: -webkit-fill-available;
+      min-height: fill-available;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+
+    /* ---loading start--- */
+    .loading-modal {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .loading-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 100%);
+      font-size: 16px;
+      color: #000;
+    }
+
+    .loading,
+    .loading>div {
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .loading {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0;
+      color: #000;
+    }
+
+    .loading.la-dark {
+      color: #333;
+    }
+
+    .loading>div {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid currentColor;
+    }
+
+    .loading {
+      width: 32px;
+      height: 32px;
+    }
+
+    .loading>div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      opacity: 0.5;
+      animation: ball-scale-pulse 2s infinite ease-in-out;
+    }
+
+    .loading>div:last-child {
+      animation-delay: -1s;
+    }
+
+    .loading.la-sm {
+      width: 16px;
+      height: 16px;
+    }
+
+    .loading.la-sm>div {
+      width: 16px;
+      height: 16px;
+    }
+
+    .loading.la-2x {
+      width: 64px;
+      height: 64px;
+    }
+
+    .loading.la-2x>div {
+      width: 64px;
+      height: 64px;
+    }
+
+    .loading.la-3x {
+      width: 96px;
+      height: 96px;
+    }
+
+    .loading.la-3x>div {
+      width: 96px;
+      height: 96px;
+    }
+
+    @keyframes ball-scale-pulse {
+
+      0%,
+      100% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+    }
+
+    /* ---loading end--- */
+
+    .container {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+    }
+
+    @media screen and (max-width: 600px) and (orientation: portrait) {
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    .comp-panel {
+      flex: 0;
+      padding: 20px;
+      text-align: center;
+      outline: 2px solid #ccc;
+      background-color: #fff;
+    }
+
+    .canvas {
+      flex: 1;
+      position: relative;
+      outline: 2px solid #ccc;
+      background-color: #fff;
+    }
+
+    .canvas-active {
+      outline: 2px dashed #ccc;
+    }
+
+    .canvas-enter {
+      background-color: #c4d7d6;
+    }
+
+    .aux-line-left {
+      width: 0;
+      height: 100%;
+      border-left: 1px dashed #333;
+      opacity: 0;
+    }
+
+    .prompt-text {
+      display: none;
+      position: absolute;
+      z-index: 999;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+      font-weight: bolder;
+      color: #999;
+      opacity: 0.5;
+    }
+
+    .comp-template {
+      width: 120px;
+      height: 60px;
+      border: 1px solid #333;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #29e;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .comp-instance {
+      width: 120px;
+      height: 60px;
+      border: 1px solid #333;
+      box-sizing: border-box;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #29e;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .comp-selected {
+      border: 2px dashed #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading-modal">
+    <div class="loading">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+  <div class="container">
+    <div class="comp-panel">
+      <div class="comp-template">Component</div>
+    </div>
+    <div class="canvas">
+      <div class="aux-line-left"></div>
+      <div class="prompt-text"></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+  <script>
+    ; (function () {
+
+      // Component default width, height and snap range(px)
+      const COMP_WIDTH = 120;
+      const COMP_HEIGHT = 60;
+      const SNAP_RANGE = 20;
+      const LEFT_ALIGN_DISTANCE = 100;
+
+      const canvasElm = document.querySelector('.canvas');
+      const promptTextElm = document.querySelector('.prompt-text');
+      // init canvas dropzone, only for UI response when dragging comp-template
+      interact(canvasElm).dropzone({
+        // don't response when dragging comp-instance
+        accept: '.comp-template',
+        // trigger enter only when entirely in canvas
+        overlap: 1.0,
+        // UI response on activate, enter, leave and deactivate
+        ondropactivate: (event) => {
+          event.target.classList.add('canvas-active');
+          promptTextElm.style.display = 'block';
+          promptTextElm.innerHTML = 'Drag into canvas';
+        },
+        ondragenter: (event) => {
+          event.target.classList.add('canvas-enter');
+          promptTextElm.innerHTML = 'Release to drop';
+        },
+        ondragleave: (event) => {
+          event.target.classList.remove('canvas-enter');
+          promptTextElm.innerHTML = 'Drag into canvas';
+        },
+        ondropdeactivate: (event) => {
+          event.target.classList.remove('canvas-active');
+          event.target.classList.remove('canvas-enter');
+          promptTextElm.innerHTML = 'Release to drop';
+          promptTextElm.style.display = 'none';
+        },
+      });
+
+      // store components for reflow, update state, calculate snap targets
+      const compList = [];
+
+      // Component class, for caching state, avoid frequently reading DOMs when snapping
+      class Comp {
+        constructor({ left = 0, right = 0, top = 0, bottom = 0, width = COMP_WIDTH, height = COMP_HEIGHT, selected = false, parent = body }) {
+          this.left = left;
+          this.right = right;
+          this.top = top;
+          this.bottom = bottom;
+          this.width = width;
+          this.height = height;
+          this.selected = selected;
+          const element = document.createElement('div');
+          element.classList.add('comp-template');
+          element.classList.add('comp-instance');
+          element.innerHTML = 'Component';
+          element.style.width = `${width}px`;
+          element.style.height = `${height}px`;
+          element.style.left = `${left}px`;
+          element.style.top = `${top}px`;
+          if (this.selected) {
+            element.classList.add('comp-selected');
+          }
+          this.element = element;
+          this.parent = parent;
+          this.parent.appendChild(this.element);
+        }
+        updateState() {
+          const { left, top, width, height } = this.element.style;
+          this.left = parseFloat(left);
+          this.top = parseFloat(top);
+          this.right = parseFloat(left) + parseFloat(width);
+          this.bottom = parseFloat(top) + parseFloat(height);
+          this.width = width;
+          this.height = height;
+        }
+        toggleSelect(selected) {
+          this.selected = selected;
+          if (selected) {
+            this.element.classList.add('comp-selected');
+            this.element.style.opacity = 0.8;
+          } else {
+            this.element.classList.remove('comp-selected');
+            this.element.style.opacity = 1;
+          }
+        }
+        convertToInstance() {
+          this.element.classList.remove('comp-template');
+        }
+      }
+
+      // observe canvas size, reflow component to keep it in canvas
+      const resizeObserver = new ResizeObserver((entries) => {
+        for (let i = 0; i < compList.length; i++) {
+          const comp = compList[i];
+          interact(comp.element).reflow({ name: 'drag', axis: 'xy' }).then(() => {
+            comp.updateState();
+          });
+        }
+      });
+      resizeObserver.observe(canvasElm);
+
+      // init draggable for component template
+      const templateElm = document.querySelector('.comp-template');
+      interact(templateElm)
+        .on('down', dragTemplateStart)
+        .draggable({
+          // set manualStart so as to drag a clone
+          manualStart: true,
+          modifiers: [
+            // snap to other components
+            interact.modifiers.snap({
+              targets: [getSnapTarget],
+              range: SNAP_RANGE,
+              offset: 'parent',
+              relativePoints: [
+                { x: 0, y: 0 },
+                { x: 0, y: 1 },
+                { x: 1, y: 0 },
+                { x: 1, y: 1 },
+              ],
+            }),
+          ],
+          onstart: dragOrResizeStart,
+          onmove: dragMove,
+          onend: dragTemplateEnd,
+        });
+
+      // before starting drag
+      function dragTemplateStart(event) {
+        const interaction = event.interaction;
+        // mouse down, not yet start moving
+        if (interaction.pointerIsDown && !interaction.interacting()) {
+          // handle position, construct component object
+          const template = event.target;
+          const templateRect = template.getBoundingClientRect();
+          const canvasRect = canvasElm.getBoundingClientRect();
+          const left = templateRect.left - canvasRect.left;
+          const right = templateRect.right - canvasRect.left;
+          const top = templateRect.top - canvasRect.top;
+          const bottom = templateRect.bottom - canvasRect.top;
+          const comp = new Comp({ left, right, top, bottom, selected: false, parent: canvasElm });
+          compList.push(comp);
+          // 'manualStart' drag the new component, the new component take over the drag event
+          interaction.start({ name: 'drag' }, event.interactable, comp.element);
+        }
+      }
+
+      // common drag function, handle drag position, can be used by template and instance
+      function dragMove(event) {
+        const target = event.target;
+        const x = (parseFloat(target.style.left)) + event.dx;
+        const y = (parseFloat(target.style.top)) + event.dy;
+        target.style.left = `${x}px`;
+        target.style.top = `${y}px`;
+        // update state if instance
+        const comp = compList.find(c => c.element === target);
+        if (comp) {
+          comp.updateState();
+        }
+      }
+
+      // drag template end
+      function dragTemplateEnd(event) {
+        const element = event.target;
+        const elementRect = element.getBoundingClientRect();
+        const canvasRect = canvasElm.getBoundingClientRect();
+        const comp = compList.find(c => c.element === element);
+        if (!comp) {
+          element.remove();
+        }
+        // if element in canvas entirely
+        if (
+          elementRect.left > canvasRect.left &&
+          elementRect.right < canvasRect.right &&
+          elementRect.top > canvasRect.top &&
+          elementRect.bottom < canvasRect.bottom
+        ) {
+          // convert to comp-instance, avoid canvas UI response
+          comp.convertToInstance();
+          initCompDraggable(comp);
+          initCompResizable(comp);
+        } else {
+          compList.splice(compList.indexOf(comp), 1);
+          element.remove();
+        }
+        dragOrResizeEnd(event);
+      }
+
+      // init component draggable
+      function initCompDraggable(comp) {
+        interact(comp.element).draggable({
+          enabled: true,
+          modifiers: [
+            // snap to other components
+            interact.modifiers.snap({
+              targets: [getSnapTarget],
+              range: SNAP_RANGE,
+              offset: 'parent',
+              relativePoints: [
+                { x: 0, y: 0 },
+                { x: 0, y: 1 },
+                { x: 1, y: 0 },
+                { x: 1, y: 1 },
+              ],
+            }),
+            // restrict in canvas
+            interact.modifiers.restrictRect({
+              restriction: canvasElm,
+            }),
+          ],
+          onstart: dragOrResizeStart,
+          onmove: dragMove,
+          onend: dragOrResizeEnd,
+        });
+      }
+
+      // calculate snap target when dragging or resizing
+      const auxLineLeftElm = document.querySelector('.aux-line-left');
+      function getSnapTarget(x, y, interaction) {
+        const activeComp = compList.find(c => c.element === interaction.element);
+        let leftNearestDistance = Number.POSITIVE_INFINITY;
+        let leftNearestSnap;
+        let xNearestDistance = Number.POSITIVE_INFINITY;
+        let xNearestSnap;
+        let yNearestDistance = Number.POSITIVE_INFINITY;
+        let yNearestSnap;
+        // if rezising, consider resize direction, in case that already snapped in opposite direction
+        // if dragging, omit these conditions
+        const { left: leftResizeOrDrag = true, right: rightResizeOrDrag = true, top: topResizeOrDrag = true, bottom: bottomResizeOrDrag = true } = interaction.edges ?? {};
+
+        // iterate other components, find nearest snap coordinates
+        for (let i = 0; i < compList.length; i++) {
+          if (activeComp === compList[i]) continue;
+          const otherComp = compList[i];
+          // left align, consider as left sides' snap
+          if (activeComp.left <= otherComp.left + LEFT_ALIGN_DISTANCE && activeComp.left >= otherComp.left - LEFT_ALIGN_DISTANCE && leftResizeOrDrag) {
+            const leftDis = Math.abs(activeComp.left - otherComp.left);
+            if (leftDis < leftNearestDistance) {
+              leftNearestDistance = leftDis;
+              leftNearestSnap = otherComp.left;
+            }
+          }
+          // left and right snap, two components must have overlapping y coords
+          if (activeComp.top < otherComp.bottom && activeComp.bottom > otherComp.top) {
+            // snap from right to left
+            if (activeComp.left >= otherComp.right - SNAP_RANGE && leftResizeOrDrag) {
+              const xDis = activeComp.left - otherComp.right;
+              if (xDis < xNearestDistance) {
+                xNearestDistance = xDis;
+                xNearestSnap = otherComp.right;
+              }
+            }
+            // snap from left to right
+            if (activeComp.right <= otherComp.left + SNAP_RANGE && rightResizeOrDrag) {
+              const xDis = otherComp.left - activeComp.right;
+              if (xDis < xNearestDistance) {
+                xNearestDistance = xDis;
+                xNearestSnap = otherComp.left;
+              }
+            }
+          }
+          // top and bottom snap, two components must have overlapping x coords
+          if (activeComp.left < otherComp.right && activeComp.right > otherComp.left) {
+            // snap from bottom to top
+            if (activeComp.top >= otherComp.bottom - SNAP_RANGE && topResizeOrDrag) {
+              const yDis = activeComp.top - otherComp.bottom;
+              if (yDis < yNearestDistance) {
+                yNearestDistance = yDis;
+                yNearestSnap = otherComp.bottom;
+              }
+            }
+            // snap from top to bottom
+            if (activeComp.bottom <= otherComp.top + SNAP_RANGE && bottomResizeOrDrag) {
+              const yDis = otherComp.top - activeComp.bottom;
+              if (yDis < yNearestDistance) {
+                yNearestDistance = yDis;
+                yNearestSnap = otherComp.top;
+              }
+            }
+          }
+        }
+        // handle aux-line-left
+        if (leftNearestSnap) {
+          auxLineLeftElm.style.opacity = '1';
+          auxLineLeftElm.style.transform = `translate(${leftNearestSnap}px, 0)`;
+        } else {
+          auxLineLeftElm.style.opacity = '0';
+        }
+        // handle left align and left/right snap
+        if (leftNearestDistance < xNearestDistance) {
+          xNearestDistance = leftNearestDistance;
+          xNearestSnap = leftNearestSnap;
+        }
+        // find nearest distance
+        const nearestDistance = Math.min(xNearestDistance, yNearestDistance);
+        // if resize corner, return point snap, otherwise return axis snap
+        let result;
+        if (xNearestDistance <= SNAP_RANGE && yNearestDistance <= SNAP_RANGE && (leftResizeOrDrag || rightResizeOrDrag) && (topResizeOrDrag || bottomResizeOrDrag)) {
+          result = { x: xNearestSnap, y: yNearestSnap, range: Math.sqrt(2 * SNAP_RANGE * SNAP_RANGE) };
+        } else if (nearestDistance === xNearestDistance && (leftResizeOrDrag || rightResizeOrDrag)) {
+          result = { x: xNearestSnap };
+        } else if (nearestDistance === yNearestDistance && (topResizeOrDrag || bottomResizeOrDrag)) {
+          result = { y: yNearestSnap };
+        }
+        return result;
+      }
+
+      // drag or resize start, add component selected style
+      function dragOrResizeStart(event) {
+        const target = event.target;
+        const comp = compList.find(c => c.element === target);
+        if (comp) {
+          comp.toggleSelect(true);
+        }
+      }
+
+      // drag or resize end, remove component selected style, hide aux-line-left
+      function dragOrResizeEnd(event) {
+        const target = event.target;
+        const comp = compList.find(c => c.element === target);
+        if (comp) {
+          comp.toggleSelect(false);
+        }
+        auxLineLeftElm.style.opacity = '0';
+      }
+
+      // init component resizable
+      function initCompResizable(comp) {
+        interact(comp.element).resizable({
+          enabled: true,
+          edges: { left: true, right: true, top: true, bottom: true },
+          modifiers: [
+            // snap to other components
+            interact.modifiers.snapEdges({
+              targets: [getSnapTarget],
+              range: SNAP_RANGE,
+              offset: 'parent',
+              relativePoints: [
+                { x: 0, y: 0 },
+                { x: 0, y: 1 },
+                { x: 1, y: 0 },
+                { x: 1, y: 1 },
+              ],
+            }),
+            // restrict min size
+            interact.modifiers.restrictSize({
+              min: { width: COMP_WIDTH, height: COMP_HEIGHT },
+            }),
+            // restrict in canvas
+            interact.modifiers.restrictEdges({
+              outer: canvasElm,
+            }),
+          ],
+          onstart: dragOrResizeStart,
+          onmove: resizeMove,
+          onend: dragOrResizeEnd,
+        });
+      }
+
+      // resize component, update state
+      function resizeMove(event) {
+        const target = event.target;
+        const rx = event.deltaRect.left;
+        const ry = event.deltaRect.top;
+        target.style.width = `${event.rect.width}px`;
+        target.style.height = `${event.rect.height}px`;
+        target.style.left = `${parseFloat(target.style.left) + rx}px`;
+        target.style.top = `${parseFloat(target.style.top) + ry}px`;
+        const comp = compList.find(c => c.element === target);
+        if (comp) {
+          comp.updateState();
+        }
+      }
+
+      // remove loading-modal
+      const loadingModalElm = document.querySelector('.loading-modal');
+      loadingModalElm.remove();
+
+    })(this);
+  </script>
+</body>
+
+</html>

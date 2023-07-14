@@ -3,6 +3,7 @@ title: JavaScript中“use strict”的作用
 date: 2023-01-17 23:41:30
 categories:
 - Mastering JS
+hide: true
 tags:
 - use strict
 ---

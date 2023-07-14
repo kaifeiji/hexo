@@ -3,6 +3,7 @@ title: JavaScript的Object.seal()
 date: 2023-01-29 18:32:38
 categories:
 - Mastering JS
+hide: true
 tags:
 - Object.seal
 ---

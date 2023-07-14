@@ -3,6 +3,7 @@ title: JavaScript的静态属性和函数
 date: 2023-02-09 21:44:34
 categories:
 - Mastering JS
+hide: true
 tags:
 - static
 ---

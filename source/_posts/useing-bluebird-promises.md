@@ -3,6 +3,7 @@ title: 使用bluebird操作Promise
 date: 2023-03-03 09:46:49
 categories:
 - Mastering JS
+hide: true
 tags:
 - bluebird
 ---

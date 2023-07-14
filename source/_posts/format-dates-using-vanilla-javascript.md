@@ -2,7 +2,8 @@
 title: 使用原生JavaScript格式化日期
 date: 2023-01-05 18:55:20
 categories:
-- 前端
+- Mastering JS
+hide: true
 tags:
 - 日期
 - 格式化

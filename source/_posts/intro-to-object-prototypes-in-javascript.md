@@ -3,6 +3,7 @@ title: JavaScript对象的原型（prototype）简介
 date: 2023-01-28 18:23:47
 categories:
 - Mastering JS
+hide: true
 tags:
 - prototype
 ---

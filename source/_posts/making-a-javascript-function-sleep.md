@@ -3,6 +3,7 @@ title: 让JavaScript函数暂停一段时间
 date: 2023-02-07 00:12:47
 categories:
 - Mastering JS
+hide: true
 tags:
 - sleep
 ---

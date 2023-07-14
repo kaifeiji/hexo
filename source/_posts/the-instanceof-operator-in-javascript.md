@@ -3,6 +3,7 @@ title: JavaScript的instanceof操作符
 date: 2023-02-01 21:34:59
 categories:
 - Mastering JS
+hide: true
 tags:
 - instanceof
 ---

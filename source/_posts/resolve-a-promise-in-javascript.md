@@ -3,6 +3,7 @@ title: JavaScript中Promise的resolve
 date: 2023-02-18 20:40:01
 categories:
 - Mastering JS
+hide: true
 tags:
 - Promise
 - resolve
