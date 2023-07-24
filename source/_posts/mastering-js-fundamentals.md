@@ -41,6 +41,12 @@ top: false
 
 ---
 
+[JavaScript的Promise链](/post/javascript-promise-chaining/)
+
+> Promise链式调用是一种很强大的模式，最大的好处是可以用一个`catch()`处理所有的错误。
+
+---
+
 [使用bluebird操作Promise](/post/useing-bluebird-promises/)
 
 > blurbird是JavaScript一个流行的Promise库。
