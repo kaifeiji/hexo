@@ -3,6 +3,7 @@ title: JavaScript的Thenable
 date: 2023-07-25 15:27:56
 categories:
 - Mastering JS
+hide: true
 tags:
 - Promise
 ---

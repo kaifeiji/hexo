@@ -3,6 +3,7 @@ title: JavaScript的Promise链
 date: 2023-07-24 14:38:44
 categories:
 - Mastering JS
+hide: true
 tags:
 - Promise
 ---

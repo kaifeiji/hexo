@@ -3,6 +3,7 @@ title: JavaScript禁用按钮
 date: 2023-07-25 16:57:44
 categories:
 - Mastering JS
+hide: true
 tags:
 - Button
 - Disable

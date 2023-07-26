@@ -3,6 +3,7 @@ title: 用FileReader读取本地文件
 date: 2023-07-25 15:44:22
 categories:
 - Mastering JS
+hide: true
 tags:
 - File
 ---

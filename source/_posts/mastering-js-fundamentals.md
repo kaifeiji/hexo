@@ -41,6 +41,18 @@ top: false
 
 ---
 
+[字符串首字母大写](/post/capitalize-the-first-letter-of-a-string-in-javascript/)
+
+> 不用任何外部库，实现字符串首字母大写。
+
+---
+
+[用forEach()遍历对象](/post/iterating-through-an-object-with-foreach/)
+
+> 通过Object.keys()、Object.values()和Object.entries()，可以用forEach遍历一个JavaScript对象。
+
+---
+
 [JavaScript的立即调用函数表达式（IIFE）](/post/immediately-invoked-function-expressions-iife-in-javascript/)
 
 > JavaScript的立即调用函数表达式（IIFE）是一种常用于变量闭包的设计模式。

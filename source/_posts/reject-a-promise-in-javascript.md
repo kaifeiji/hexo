@@ -3,6 +3,7 @@ title: JavaScript中Promise的reject
 date: 2023-07-25 15:02:43
 categories:
 - Mastering JS
+hide: true
 tags:
 - Promise
 ---

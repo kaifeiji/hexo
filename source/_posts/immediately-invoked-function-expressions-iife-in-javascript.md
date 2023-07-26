@@ -3,6 +3,7 @@ title: JavaScript的立即调用函数表达式（IIFE）
 date: 2023-07-25 17:08:24
 categories:
 - Mastering JS
+hide: true
 tags:
 - IIFE
 ---
