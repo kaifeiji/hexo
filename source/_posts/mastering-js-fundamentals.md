@@ -41,6 +41,48 @@ top: false
 
 ---
 
+[JavaScript的立即调用函数表达式（IIFE）](/post/immediately-invoked-function-expressions-iife-in-javascript/)
+
+> JavaScript的立即调用函数表达式（IIFE）是一种常用于变量闭包的设计模式。
+
+---
+
+[JavaScript禁用按钮](/post/disable-a-button-in-javascript/)
+
+> 如何用原生JavaScript禁用一个按钮。
+
+---
+
+[JavaScript的FormData](/post/formdata-in-javascript/)
+
+> `FormData`类在JavaScript上传文件时非常有用。
+
+---
+
+[JavaScript的Blob](/post/blobs-in-javascript/)
+
+> Blob（二进制大型对象）是JavaScript中一种类似于文件的数据结构，相当于客户端的Buffer。
+
+---
+
+[用FileReader读取本地文件](/post/read-local-files-in-javascript-with-filereader/)
+
+> FileReader类可以从原生的文件input中读取文件。
+
+---
+
+[JavaScript的Thenable](/post/thenables-in-javascript/)
+
+> Thenable是一种行为类似于Promise的对象，主要用于链式操作和async/await，但它并不是Promise。
+
+---
+
+[JavaScript中Promise的reject](/post/reject-a-promise-in-javascript/)
+
+> 在Promise中出现的错误，可以用reject将其标记为rejected状态。
+
+---
+
 [JavaScript的Promise链](/post/javascript-promise-chaining/)
 
 > Promise链式调用是一种很强大的模式，最大的好处是可以用一个`catch()`处理所有的错误。
