@@ -41,6 +41,18 @@ top: false
 
 ---
 
+[介绍JavaScript中Symbol](/post/an-introduction-to-symbols-in-javascript/)
+
+> Symbol提供了一种在对象中创建隐藏属性的方式。
+
+---
+
+[原生JavaScript获取URL参数](/post/get-query-string-values-in-vanilla-javascript/)
+
+> 本文展示了如何用原生JavaScript解析URL参数。
+
+---
+
 [字符串首字母大写](/post/capitalize-the-first-letter-of-a-string-in-javascript/)
 
 > 不用任何外部库，实现字符串首字母大写。
