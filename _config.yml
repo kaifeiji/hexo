@@ -7,8 +7,20 @@ title: 开飞机的老张
 subtitle: '写给未来的信'
 description: '这个人很懒，什么也没有留下'
 keywords:
-author: kaifeiji
-language: zh-CN
+author: kaifeiji.cc
+language:
+- zh-CN
+- en
+# config hexo-generator-i18n option (optional, this is default option)
+i18n:
+  type:
+    - page
+    # - post # Disable direct copy
+  generator:
+    - archive
+    - category
+    - tag
+    - index
 timezone: 'Asia/Shanghai'
 
 # URL
